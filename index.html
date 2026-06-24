@@ -507,67 +507,84 @@ renderWishes();
 // Confetti
 function createConfetti(n=15){const colors=['#b388ff','#e040fb','#00e5ff','#39ff14','#ff6bff','#FFD700','#ff1744','#ffab00','#7c4dff'];for(let i=0;i<n;i++){const e=document.createElement('div');e.className='confetti';e.style.left=Math.random()*100+'vw';e.style.background=colors[Math.floor(Math.random()*colors.length)];e.style.color=colors[Math.floor(Math.random()*colors.length)];e.style.width=(5+Math.random()*10)+'px';e.style.height=(5+Math.random()*10)+'px';e.style.borderRadius=Math.random()>.5?'50%':'2px';e.style.animationDuration=(3+Math.random()*3)+'s';e.style.animationDelay=Math.random()*2+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),6000);}}
 
-// Fireworks - skyshot with sound
+// Fireworks - rhythmic beat sound
+let fwBeatCount=0;
 function fwSound(){
   try{
     const ac=new(window.AudioContext||window.webkitAudioContext)();
-    // ---- Launch whistle (realistic rising pitch) ----
-    const osc=ac.createOscillator();osc.type='sawtooth';
-    osc.frequency.setValueAtTime(200,ac.currentTime);
-    osc.frequency.linearRampToValueAtTime(1800,ac.currentTime+0.55);
-    const wGain=ac.createGain();
-    wGain.gain.setValueAtTime(0.04,ac.currentTime);
-    wGain.gain.setValueAtTime(0.04,ac.currentTime+0.4);
-    wGain.gain.exponentialRampToValueAtTime(0.001,ac.currentTime+0.6);
-    const wFilter=ac.createBiquadFilter();wFilter.type='bandpass';wFilter.frequency.value=800;wFilter.Q.value=2;
-    osc.connect(wFilter);wFilter.connect(wGain);wGain.connect(ac.destination);
-    osc.start(ac.currentTime);osc.stop(ac.currentTime+0.6);
-    // ---- Primary BOOM (rich explosion) ----
-    setTimeout(()=>{
-      const sr=ac.sampleRate;
-      // Layer 1: deep low boom
-      const buf1=ac.createBuffer(1,sr*0.6,sr);const d1=buf1.getChannelData(0);
-      for(let i=0;i<d1.length;i++)d1[i]=(Math.random()*2-1)*Math.pow(1-i/d1.length,4)*0.9;
-      const n1=ac.createBufferSource();n1.buffer=buf1;
-      const lp1=ac.createBiquadFilter();lp1.type='lowpass';lp1.frequency.value=150;
-      const g1=ac.createGain();g1.gain.setValueAtTime(0.25,ac.currentTime);g1.gain.exponentialRampToValueAtTime(0.001,ac.currentTime+0.6);
-      n1.connect(lp1);lp1.connect(g1);g1.connect(ac.destination);n1.start(ac.currentTime);n1.stop(ac.currentTime+0.6);
-      // Layer 2: mid crack
-      const buf2=ac.createBuffer(1,sr*0.3,sr);const d2=buf2.getChannelData(0);
-      for(let i=0;i<d2.length;i++)d2[i]=(Math.random()*2-1)*Math.pow(1-i/d2.length,2);
-      const n2=ac.createBufferSource();n2.buffer=buf2;
-      const lp2=ac.createBiquadFilter();lp2.type='lowpass';lp2.frequency.value=800;
-      const g2=ac.createGain();g2.gain.setValueAtTime(0.12,ac.currentTime);g2.gain.exponentialRampToValueAtTime(0.001,ac.currentTime+0.3);
-      n2.connect(lp2);lp2.connect(g2);g2.connect(ac.destination);n2.start(ac.currentTime);n2.stop(ac.currentTime+0.3);
-      // Layer 3: sharp high transient
-      const buf3=ac.createBuffer(1,Math.floor(sr*0.08),sr);const d3=buf3.getChannelData(0);
-      for(let i=0;i<d3.length;i++)d3[i]=(Math.random()*2-1)*(1-i/d3.length);
-      const n3=ac.createBufferSource();n3.buffer=buf3;
-      const g3=ac.createGain();g3.gain.setValueAtTime(0.15,ac.currentTime);g3.gain.exponentialRampToValueAtTime(0.001,ac.currentTime+0.08);
-      n3.connect(g3);g3.connect(ac.destination);n3.start(ac.currentTime);n3.stop(ac.currentTime+0.08);
-    },560);
-    // ---- Echo boom (slightly delayed for realism) ----
+    const t=ac.currentTime;
+    const bpm=128;
+    const beat=60/bpm;
+    const vol=0.08;
+    // ---- Intro build-up (count-in) ----
+    for(let i=0;i<4;i++){
+      const bt=t+i*beat*0.5;
+      // Quiet click
+      const cBuf=ac.createBuffer(1,Math.floor(ac.sampleRate*0.02),ac.sampleRate);
+      const cD=cBuf.getChannelData(0);
+      for(let j=0;j<cD.length;j++)cD[j]=(Math.random()*2-1)*Math.pow(1-j/cD.length,8);
+      const cSrc=ac.createBufferSource();cSrc.buffer=cBuf;
+      const cG=ac.createGain();cG.gain.setValueAtTime(vol*0.3,bt);cG.gain.exponentialRampToValueAtTime(0.001,bt+0.05);
+      cSrc.connect(cG);cG.connect(ac.destination);cSrc.start(bt);cSrc.stop(bt+0.05);
+    }
+    // ---- Main rhythm (4 bars of 4/4) ----
+    const kickPattern=[1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0];
+    const snarePattern=[0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0];
+    const hatPattern= [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+    const melNotes=[261.63,329.63,392,349.23,392,440,523.25,392];
+    const start=t+beat*0.2;
+    for(let i=0;i<16;i++){
+      const bt=start+i*beat/2;
+      // Kick
+      if(kickPattern[i]){
+        const buf=ac.createBuffer(1,Math.floor(ac.sampleRate*0.2),ac.sampleRate);
+        const d=buf.getChannelData(0);
+        for(let j=0;j<d.length;j++)d[j]=(Math.random()*2-1)*Math.pow(1-j/d.length,6)*0.8;
+        const src=ac.createBufferSource();src.buffer=buf;
+        const lp=ac.createBiquadFilter();lp.type='lowpass';lp.frequency.value=120;
+        const g=ac.createGain();g.gain.setValueAtTime(vol*1.5,bt);g.gain.exponentialRampToValueAtTime(0.001,bt+0.2);
+        src.connect(lp);lp.connect(g);g.connect(ac.destination);src.start(bt);src.stop(bt+0.2);
+      }
+      // Snare
+      if(snarePattern[i]){
+        const buf=ac.createBuffer(1,Math.floor(ac.sampleRate*0.15),ac.sampleRate);
+        const d=buf.getChannelData(0);
+        for(let j=0;j<d.length;j++)d[j]=(Math.random()*2-1)*Math.pow(1-j/d.length,3);
+        const src=ac.createBufferSource();src.buffer=buf;
+        const bp=ac.createBiquadFilter();bp.type='bandpass';bp.frequency.value=250;bp.Q.value=1;
+        const g=ac.createGain();g.gain.setValueAtTime(vol*1.2,bt);g.gain.exponentialRampToValueAtTime(0.001,bt+0.15);
+        src.connect(bp);bp.connect(g);g.connect(ac.destination);src.start(bt);src.stop(bt+0.15);
+      }
+      // Hi-hat
+      if(hatPattern[i]){
+        const buf=ac.createBuffer(1,Math.floor(ac.sampleRate*0.04),ac.sampleRate);
+        const d=buf.getChannelData(0);
+        for(let j=0;j<d.length;j++)d[j]=(Math.random()*2-1)*Math.pow(1-j/d.length,6)*0.3;
+        const src=ac.createBufferSource();src.buffer=buf;
+        const hp=ac.createBiquadFilter();hp.type='highpass';hp.frequency.value=6000;
+        const g=ac.createGain();g.gain.setValueAtTime(vol*0.7,bt);g.gain.exponentialRampToValueAtTime(0.001,bt+0.05);
+        src.connect(hp);hp.connect(g);g.connect(ac.destination);src.start(bt);src.stop(bt+0.05);
+      }
+      // Bass/melody every other beat
+      if(i%2===0){
+        const freq=melNotes[Math.floor(i/2)%melNotes.length];
+        const osc=ac.createOscillator();osc.type='sine';osc.frequency.value=freq;
+        const g=ac.createGain();g.gain.setValueAtTime(vol*0.4,bt);g.gain.exponentialRampToValueAtTime(0.001,bt+beat*0.4);
+        const filter=ac.createBiquadFilter();filter.type='lowpass';filter.frequency.value=600;
+        osc.connect(filter);filter.connect(g);g.connect(ac.destination);osc.start(bt);osc.stop(bt+beat*0.4);
+      }
+    }
+    // ---- Big finale boom (soft) at end ----
+    const endBoom=start+8*beat;
     setTimeout(()=>{
       const sr=ac.sampleRate;
       const buf=ac.createBuffer(1,sr*0.5,sr);const d=buf.getChannelData(0);
-      for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/d.length,3);
+      for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/d.length,4)*0.5;
       const n=ac.createBufferSource();n.buffer=buf;
-      const lp=ac.createBiquadFilter();lp.type='lowpass';lp.frequency.value=200;
-      const g=ac.createGain();g.gain.setValueAtTime(0.08,ac.currentTime);g.gain.exponentialRampToValueAtTime(0.001,ac.currentTime+0.5);
+      const lp=ac.createBiquadFilter();lp.type='lowpass';lp.frequency.value=100;
+      const g=ac.createGain();g.gain.setValueAtTime(vol*0.8,ac.currentTime);g.gain.exponentialRampToValueAtTime(0.001,ac.currentTime+0.5);
       n.connect(lp);lp.connect(g);g.connect(ac.destination);n.start(ac.currentTime);n.stop(ac.currentTime+0.5);
-    },800);
-    // ---- Crackle sparks ----
-    setTimeout(()=>{
-      for(let c=0;c<6;c++)setTimeout(()=>{
-        const sr=ac.sampleRate;
-        const buf=ac.createBuffer(1,Math.floor(sr*0.08),sr);const d=buf.getChannelData(0);
-        for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/d.length,2);
-        const s=ac.createBufferSource();s.buffer=buf;
-        const hp=ac.createBiquadFilter();hp.type='highpass';hp.frequency.value=3000;
-        const g=ac.createGain();g.gain.setValueAtTime(0.04,ac.currentTime);g.gain.exponentialRampToValueAtTime(0.001,ac.currentTime+0.08);
-        s.connect(hp);hp.connect(g);g.connect(ac.destination);s.start(ac.currentTime);s.stop(ac.currentTime+0.08);
-      },c*60+Math.random()*40);
-    },700);
+    },start*1000+8*beat*1000-ac.currentTime*1000);
   }catch(e){}
 }
 function launchFireworks(){
