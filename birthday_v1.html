@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎂 Happy Birthday Dhanalakshmi! 🎉</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Baloo+2:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Baloo 2', cursive;
+            background: linear-gradient(135deg, #1a0033, #4a0066, #8b008b, #ff1493, #ff6347);
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: white;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Floating Emojis */
+        .floating-emoji {
+            position: fixed;
+            font-size: 30px;
+            animation: floatUp 5s linear infinite;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.7;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0.7; }
+            100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+        }
+
+        /* HEADER */
+        .header {
+            position: relative;
+            z-index: 1;
+            padding: 30px 20px;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            margin-bottom: 30px;
+            border: 3px solid rgba(255,215,0,0.5);
+            animation: glowPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes glowPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(255,215,0,0.3); }
+            50% { box-shadow: 0 0 50px rgba(255,215,0,0.6); }
+        }
+
+        .header h1 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 3.5em;
+            background: linear-gradient(45deg, #FFD700, #FFA500, #FF6347, #FF1493);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: none;
+            animation: rainbow 3s linear infinite;
+            background-size: 300% 300%;
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
+        }
+
+        .header .subtitle {
+            font-size: 1.3em;
+            color: #FFD700;
+            margin-top: 5px;
+            animation: sparkle 1.5s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; text-shadow: 0 0 10px #FFD700; }
+            50% { opacity: 0.7; text-shadow: 0 0 30px #FFD700; }
+        }
+
+        .tamil-dialogue-box {
+            background: rgba(255,215,0,0.15);
+            border: 2px solid #FFD700;
+            border-radius: 20px;
+            padding: 15px 25px;
+            margin: 20px auto;
+            max-width: 600px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .tamil-dialogue-box:hover {
+            transform: scale(1.02);
+            background: rgba(255,215,0,0.25);
+        }
+
+        .tamil-dialogue-box .speaker {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .tamil-dialogue-box .dialogue-text {
+            color: #FFD700;
+            font-weight: 700;
+        }
+
+        .tamil-dialogue-box .hint {
+            font-size: 0.7em;
+            color: rgba(255,255,255,0.5);
+            position: absolute;
+            bottom: -25px;
+        }
+
+        /* CAKE SECTION */
+        .cake-section {
+            position: relative;
+            z-index: 1;
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+        }
+
+        .cake {
+            position: relative;
+            width: 280px;
+            height: 200px;
+            margin: 30px auto 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .cake:hover {
+            transform: scale(1.05);
+        }
+
+        .cake-base {
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(180deg, #FFB6C1, #FF69B4);
+            border-radius: 10px 10px 25px 25px;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            font-weight: bold;
+            color: rgba(255,255,255,0.3);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .cake-middle {
+            width: 90%;
+            height: 60px;
+            background: linear-gradient(180deg, #FFD700, #FFA500);
+            border-radius: 10px 10px 0 0;
+            position: absolute;
+            bottom: 75px;
+            left: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .cake-top {
+            width: 80%;
+            height: 50px;
+            background: linear-gradient(180deg, #98FB98, #32CD32);
+            border-radius: 15px 15px 0 0;
+            position: absolute;
+            bottom: 130px;
+            left: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .candles {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+        }
+
+        .candle {
+            width: 12px;
+            height: 35px;
+            background: linear-gradient(180deg, #FF69B4, #FF1493);
+            border-radius: 6px 6px 3px 3px;
+            position: relative;
+            animation: candleFlicker 0.5s ease-in-out infinite alternate;
+        }
+
+        .candle:nth-child(2) { height: 40px; }
+        .candle:nth-child(4) { height: 38px; }
+
+        .candle::after {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 15px;
+            background: radial-gradient(ellipse, #FFD700, #FF4500);
+            border-radius: 50%;
+            animation: flame 0.3s ease-in-out infinite alternate;
+        }
+
+        @keyframes flame {
+            0% { transform: translateX(-50%) scale(1); }
+            100% { transform: translateX(-50%) scale(1.1, 0.9); }
+        }
+
+        @keyframes candleFlicker {
+            0% { opacity: 1; }
+            100% { opacity: 0.9; }
+        }
+
+        .cake.blown .candle::after {
+            display: none;
+        }
+
+        .cake.blown .candle {
+            background: #888;
+        }
+
+        .blow-hint {
+            color: #FFD700;
+            font-size: 1em;
+            margin-top: 10px;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        /* GAMES SECTION */
+        .games-section {
+            position: relative;
+            z-index: 1;
+            margin: 30px 0;
+        }
+
+        .game-tabs {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .game-tab {
+            padding: 10px 25px;
+            border-radius: 50px;
+            border: 2px solid rgba(255,255,255,0.3);
+            background: rgba(0,0,0,0.3);
+            color: white;
+            font-size: 1em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Baloo 2', cursive;
+        }
+
+        .game-tab:hover, .game-tab.active {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            border-color: #FFD700;
+            color: #1a0033;
+            transform: scale(1.05);
+        }
+
+        .game-area {
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 25px;
+            min-height: 400px;
+            border: 2px solid rgba(255,215,0,0.2);
+        }
+
+        .game {
+            display: none;
+        }
+
+        .game.active {
+            display: block;
+        }
+
+        /* BALLOON POP GAME */
+        .balloon-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+            min-height: 300px;
+        }
+
+        .balloon {
+            width: 65px;
+            height: 80px;
+            background: radial-gradient(ellipse at 30% 30%, #fff, #FF1493);
+            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s;
+            animation: sway 2s ease-in-out infinite;
+        }
+
+        .balloon::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 15px;
+            background: #666;
+        }
+
+        .balloon::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 8px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 50%;
+        }
+
+        .balloon:nth-child(2n) { background: radial-gradient(ellipse at 30% 30%, #fff, #FF6347); animation-delay: 0.3s; }
+        .balloon:nth-child(3n) { background: radial-gradient(ellipse at 30% 30%, #fff, #FFD700); animation-delay: 0.6s; }
+        .balloon:nth-child(4n) { background: radial-gradient(ellipse at 30% 30%, #fff, #32CD32); animation-delay: 0.9s; }
+        .balloon:nth-child(5n) { background: radial-gradient(ellipse at 30% 30%, #fff, #1E90FF); animation-delay: 1.2s; }
+        .balloon:nth-child(6n) { background: radial-gradient(ellipse at 30% 30%, #fff, #9932CC); animation-delay: 0.5s; }
+
+        .balloon.popped {
+            animation: pop 0.3s forwards;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); opacity: 0.5; }
+            100% { transform: scale(0); opacity: 0; }
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+
+        .game-score {
+            font-size: 1.3em;
+            color: #FFD700;
+            margin: 10px 0;
+        }
+
+        .game-btn {
+            padding: 12px 35px;
+            border-radius: 50px;
+            border: none;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #1a0033;
+            font-size: 1.1em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Baloo 2', cursive;
+            margin: 10px;
+        }
+
+        .game-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(255,215,0,0.4);
+        }
+
+        /* MEMORY GAME */
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 400px;
+            margin: 10px auto;
+        }
+
+        .memory-card {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #FF1493, #FFD700);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            cursor: pointer;
+            transition: all 0.3s;
+            user-select: none;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .memory-card.flipped {
+            background: rgba(255,255,255,0.95);
+            transform: rotateY(180deg);
+        }
+
+        .memory-card.matched {
+            background: #32CD32;
+            cursor: default;
+            opacity: 0.6;
+            transform: scale(0.95);
+        }
+
+        /* TRIVIA */
+        .trivia-question {
+            font-size: 1.4em;
+            margin: 20px 0;
+            color: #FFD700;
+        }
+
+        .trivia-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .trivia-option {
+            padding: 12px 20px;
+            border-radius: 15px;
+            border: 2px solid rgba(255,255,255,0.2);
+            background: rgba(0,0,0,0.3);
+            color: white;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Baloo 2', cursive;
+        }
+
+        .trivia-option:hover {
+            border-color: #FFD700;
+            background: rgba(255,215,0,0.1);
+        }
+
+        .trivia-option.correct {
+            border-color: #32CD32;
+            background: rgba(50,205,50,0.2);
+        }
+
+        .trivia-option.wrong {
+            border-color: #FF4444;
+            background: rgba(255,68,68,0.2);
+        }
+
+        /* WISH SECTION */
+        .wish-section {
+            position: relative;
+            z-index: 1;
+            margin: 30px 0;
+            padding: 30px;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            border: 2px solid rgba(255,215,0,0.3);
+        }
+
+        .wish-section h2 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2em;
+            color: #FFD700;
+            margin-bottom: 20px;
+        }
+
+        .wish-text {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .wish-text .highlight {
+            color: #FFD700;
+            font-weight: 700;
+        }
+
+        .photo-frame {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #FFD700;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            background: linear-gradient(135deg, rgba(255,20,147,0.3), rgba(255,215,0,0.3));
+            animation: glowPulse 2s ease-in-out infinite;
+            overflow: hidden;
+        }
+
+        /* CONFETTI */
+        .confetti-piece {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            top: -10px;
+            z-index: 9999;
+            pointer-events: none;
+            animation: confettiFall 4s linear forwards;
+        }
+
+        @keyframes confettiFall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .header h1 { font-size: 2em; }
+            .memory-grid { grid-template-columns: repeat(3, 1fr); }
+            .balloon { width: 50px; height: 65px; }
+            .cake { width: 220px; }
+            .tamil-dialogue-box { font-size: 1em; padding: 12px; }
+        }
+
+        /* Fireworks effect */
+        .firework {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        .firework-particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            animation: fireworkBurst 1s ease-out forwards;
+        }
+
+        @keyframes fireworkBurst {
+            0% { transform: translate(0, 0) scale(1); opacity: 1; }
+            100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+        }
+
+        .signature {
+            margin-top: 30px;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>🎉 Happy Birthday! 🎉</h1>
+            <div class="subtitle">✨ Dhanalakshmi ✨</div>
+        </div>
+
+        <!-- TAMIL DIALOGUE -->
+        <div class="tamil-dialogue-box" onclick="nextDialogue()">
+            <span class="speaker">🎤</span>
+            <span class="dialogue-text" id="dialogueText">"என்ன ராஸ்கலா! பார்த்து எத்தனை நாள் ஆச்சு!"</span>
+            <span class="hint">👇 Click for next dialogue!</span>
+        </div>
+
+        <!-- CAKE -->
+        <div class="cake-section">
+            <h2 style="font-family: 'Fredoka One', cursive; font-size: 1.8em;">🎂 Blow the Candles!</h2>
+            <p class="blow-hint">🔊 Say "Poo" or click the cake to blow!</p>
+            <div class="cake" id="cake" onclick="blowCandles()">
+                <div class="candles" id="candles">
+                    <div class="candle"></div>
+                    <div class="candle"></div>
+                    <div class="candle"></div>
+                    <div class="candle"></div>
+                    <div class="candle"></div>
+                </div>
+                <div class="cake-top">🍓</div>
+                <div class="cake-middle">🎉</div>
+                <div class="cake-base">🎂</div>
+            </div>
+            <p id="cakeStatus" style="color: rgba(255,255,255,0.7); margin-top: 10px;">Make a wish! 🎯</p>
+        </div>
+
+        <!-- GAMES -->
+        <div class="games-section">
+            <div class="game-tabs">
+                <div class="game-tab active" onclick="switchGame('balloon', this)">🎈 Pop It!</div>
+                <div class="game-tab" onclick="switchGame('memory', this)">🧠 Memory</div>
+                <div class="game-tab" onclick="switchGame('trivia', this)">🤣 Fun Quiz</div>
+            </div>
+
+            <div class="game-area">
+                <!-- BALLOON POP -->
+                <div class="game active" id="game-balloon">
+                    <h2>🎈 Pop the Balloons!</h2>
+                    <div class="game-score" id="balloonScore">Popped: 0 🎯</div>
+                    <div class="balloon-container" id="balloonContainer"></div>
+                    <button class="game-btn" onclick="startBalloonGame()">🔄 New Round</button>
+                </div>
+
+                <!-- MEMORY -->
+                <div class="game" id="game-memory">
+                    <h2>🧠 Memory Match</h2>
+                    <div class="game-score" id="memoryScore">Moves: 0 | Matches: 0/6</div>
+                    <div class="memory-grid" id="memoryGrid"></div>
+                    <button class="game-btn" onclick="startMemoryGame()">🔄 New Game</button>
+                </div>
+
+                <!-- TRIVIA -->
+                <div class="game" id="game-trivia">
+                    <h2>🤣 Dhanalakshmi Fun Quiz</h2>
+                    <div class="trivia-question" id="triviaQuestion"></div>
+                    <div class="trivia-options" id="triviaOptions"></div>
+                    <div class="game-score" id="triviaScore">Score: 0/0</div>
+                    <button class="game-btn" onclick="startTrivia()">🔄 New Quiz</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- WISH -->
+        <div class="wish-section" id="wishSection">
+            <div class="photo-frame">🎂</div>
+            <h2>💖 A Special Wish For You 💖</h2>
+            <div class="wish-text">
+                <p>Happy Birthday! 🎂💖</p>
+                <p>Unna maari oru friend en life la irukkuradhu romba periya blessing. Namma daily pesunalum, pesalanaalum, nee enakku eppovum special dhana. ❤️</p>
+                <p>Un smile eppovum ippadiye irukanum, un dreams ellam nijamaaganum, un life happiness and success nala nirayanum nu manasukulla irundhu wish panren. ✨</p>
+                <p>Thanks for being such a wonderful person and an amazing friend. Indha birthday unakku neraya happiness, love, and unforgettable memories kondu varanum.</p>
+                <p style="margin-top: 20px; font-size: 1.3em; color: #FFD700;">
+                    Have an awesome day and a beautiful year ahead! 🥳🌸💫
+                </p>
+            </div>
+        </div>
+
+        <div class="signature">
+            Made with ❤️ for Dhanalakshmi 🎂
+        </div>
+    </div>
+
+    <script>
+        // ============= TAMIL DIALOGUES =============
+        const dialogues = [
+            { text: '"என்ன ராஸ்கலா! பார்த்து எத்தனை நாள் ஆச்சு!"', emoji: '🎤' },
+            { text: '"வெர லெவல் Dhanalakshmi! வெர லெவல்!"', emoji: '🔥' },
+            { text: '"சும்மா இருடி... நீ தான் டாப்!"', emoji: '👑' },
+            { text: '"என்னடி இது... பார்ட்டி இல்லாமலா?!"', emoji: '😡' },
+            { text: '"பொண்ணு ரேஞ்சுக்கு வந்துட்டா... பார்த்துக்கோங்க!"', emoji: '😎' },
+            { text: '"ஒரு மட்டன் பிரியாணி சாப்பிடலாமா?!"', emoji: '🍗' },
+            { text: '"நீ தான் என்னோட பெஸ்டி! லவ் யூ!"', emoji: '💕' },
+            { text: '"இந்த வயசுலயே இவ்வளவு கெட்டி... ம்ம்ம்!"', emoji: '💪' },
+            { text: '"எனக்கு என்ன தெரியும்... நீ சூப்பர்னு!"', emoji: '⭐' },
+            { text: '"பிறந்தநாள் வாழ்த்துக்கள் மச்சி! ராக் ஆகு!"', emoji: '🎸' },
+            { text: '"டக்கர் விடாதே... நீ தான் வின்னர்!"', emoji: '🏆' },
+            { text: '"இன்னிக்கு புல் ஆனா ஆகட்டும்!"', emoji: '🥳' },
+            { text: '"செம்மையா இருக்கணும்... கேள்வி கேட்க மாட்டேன்!"', emoji: '😜' },
+            { text: '"என்னடி லைட்டா எடுக்காதே... இது உன் டே!"', emoji: '✨' },
+            { text: '"உன் ஸ்மைல் தான் எனக்கு செம OST!"', emoji: '😁' },
+        ];
+
+        let dialogueIndex = 0;
+
+        function nextDialogue() {
+            dialogueIndex = (dialogueIndex + 1) % dialogues.length;
+            const d = dialogues[dialogueIndex];
+            document.getElementById('dialogueText').textContent = d.text;
+            document.querySelector('.tamil-dialogue-box .speaker').textContent = d.emoji;
+            createConfetti(50);
+        }
+
+        // ============= CAKE + CANDLES =============
+        let candlesBlown = false;
+
+        function blowCandles() {
+            if (candlesBlown) return;
+            candlesBlown = true;
+            document.getElementById('cake').classList.add('blown');
+            document.getElementById('cakeStatus').textContent = '🎉 Candles blown! Make a wish! 🎉';
+            createConfetti(100);
+            launchFireworks();
+            setTimeout(() => {
+                if (annyang) {
+                    annyang.removeCallback(undefined, undefined, 'blow');
+                }
+            }, 100);
+        }
+
+        // Voice recognition for blowing candles
+        if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            const recognition = new SpeechRecognition();
+            recognition.lang = 'ta-IN';
+            recognition.continuous = true;
+            recognition.interimResults = false;
+
+            recognition.onresult = function(event) {
+                const transcript = Array.from(event.results)
+                    .map(r => r[0].transcript.toLowerCase())
+                    .join(' ');
+                if (transcript.includes('poo') || transcript.includes('பூ') || transcript.includes(' fu')) {
+                    blowCandles();
+                }
+            };
+            recognition.start();
+        } else {
+            // Fallback: try annyang if available via CDN
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js';
+            script.onload = function() {
+                if (annyang) {
+                    annyang.addCallback('result', function(phrases) {
+                        const txt = phrases.join(' ').toLowerCase();
+                        if (txt.includes('poo') || txt.includes('bu') || txt.includes('foo')) {
+                            blowCandles();
+                        }
+                    }, 'blow');
+                    annyang.start({ autoRestart: false, continuous: false });
+                }
+            };
+            document.head.appendChild(script);
+        }
+
+        // ============= BALLOON POP GAME =============
+        let balloonScore = 0;
+
+        function startBalloonGame() {
+            balloonScore = 0;
+            document.getElementById('balloonScore').textContent = 'Popped: 0 🎯';
+            const container = document.getElementById('balloonContainer');
+            container.innerHTML = '';
+            const colors = ['#FF1493', '#FF6347', '#FFD700', '#32CD32', '#1E90FF', '#9932CC', '#FF4500', '#00CED1'];
+            const numBalloons = 20 + Math.floor(Math.random() * 10);
+
+            for (let i = 0; i < numBalloons; i++) {
+                const balloon = document.createElement('div');
+                balloon.className = 'balloon';
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                balloon.style.background = `radial-gradient(ellipse at 30% 30%, rgba(255,255,255,0.8), ${color})`;
+                balloon.style.animationDelay = `${Math.random() * 2}s`;
+                balloon.style.animationDuration = `${1.5 + Math.random() * 1.5}s`;
+                balloon.onclick = function() {
+                    if (this.classList.contains('popped')) return;
+                    this.classList.add('popped');
+                    balloonScore++;
+                    document.getElementById('balloonScore').textContent = `Popped: ${balloonScore} 🎯`;
+                    createConfetti(10);
+                    setTimeout(() => this.remove(), 300);
+                    if (document.querySelectorAll('.balloon:not(.popped)').length === 0) {
+                        setTimeout(() => {
+                            if (balloonScore >= 20) {
+                                document.getElementById('balloonScore').textContent =
+                                    `🎉 ${balloonScore} balloons! You're a pro! 🎉`;
+                                createConfetti(80);
+                                launchFireworks();
+                            }
+                        }, 500);
+                    }
+                };
+                container.appendChild(balloon);
+            }
+        }
+
+        // ============= MEMORY GAME =============
+        const memoryEmojis = ['🎂', '🎈', '🎁', '🎉', '👑', '💖'];
+        let memoryCards = [];
+        let flippedCards = [];
+        let matchedPairs = 0;
+        let moves = 0;
+        let memoryLocked = false;
+
+        function startMemoryGame() {
+            matchedPairs = 0;
+            moves = 0;
+            flippedCards = [];
+            memoryLocked = false;
+            document.getElementById('memoryScore').textContent = 'Moves: 0 | Matches: 0/6';
+
+            const grid = document.getElementById('memoryGrid');
+            grid.innerHTML = '';
+
+            let emojis = [...memoryEmojis, ...memoryEmojis];
+            for (let i = emojis.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [emojis[i], emojis[j]] = [emojis[j], emojis[i]];
+            }
+
+            memoryCards = emojis;
+
+            emojis.forEach((emoji, index) => {
+                const card = document.createElement('div');
+                card.className = 'memory-card';
+                card.dataset.index = index;
+                card.dataset.emoji = emoji;
+                card.textContent = '❓';
+                card.onclick = function() {
+                    if (memoryLocked) return;
+                    if (this.classList.contains('flipped') || this.classList.contains('matched')) return;
+                    flipCard(this);
+                };
+                grid.appendChild(card);
+            });
+        }
+
+        function flipCard(card) {
+            card.classList.add('flipped');
+            card.textContent = card.dataset.emoji;
+            flippedCards.push(card);
+
+            if (flippedCards.length === 2) {
+                moves++;
+                memoryLocked = true;
+                const [card1, card2] = flippedCards;
+
+                if (card1.dataset.emoji === card2.dataset.emoji) {
+                    card1.classList.add('matched');
+                    card2.classList.add('matched');
+                    matchedPairs++;
+                    flippedCards = [];
+                    memoryLocked = false;
+                    document.getElementById('memoryScore').textContent =
+                        `Moves: ${moves} | Matches: ${matchedPairs}/6`;
+
+                    if (matchedPairs === 6) {
+                        setTimeout(() => {
+                            document.getElementById('memoryScore').textContent =
+                                `🎉 ${moves} moves! Amazing memory! 🎉`;
+                            createConfetti(80);
+                            launchFireworks();
+                        }, 500);
+                    }
+                } else {
+                    setTimeout(() => {
+                        card1.classList.remove('flipped');
+                        card1.textContent = '❓';
+                        card2.classList.remove('flipped');
+                        card2.textContent = '❓';
+                        flippedCards = [];
+                        memoryLocked = false;
+                        document.getElementById('memoryScore').textContent =
+                            `Moves: ${moves} | Matches: ${matchedPairs}/6`;
+                    }, 800);
+                }
+            }
+        }
+
+        // ============= TRIVIA =============
+        const triviaQuestions = [
+            {
+                q: "What does 'Enna Rascala' mean? 😜",
+                options: ["Hello", "What a rascal", "Good morning", "Thank you"],
+                correct: 1
+            },
+            {
+                q: "What's the best thing about Dhanalakshmi? 🌟",
+                options: ["Her smile", "Her intelligence", "Her kindness", "ALL OF THE ABOVE!"],
+                correct: 3
+            },
+            {
+                q: "How should we celebrate Dhanalakshmi's birthday? 🎉",
+                options: ["Party all night", "Eat biryani", "Dance like crazy", "ALL OF THE ABOVE!"],
+                correct: 3
+            },
+            {
+                q: "'Vera Level' means... 🔥",
+                answer: "Next Level! And that's what YOU are!",
+                options: ["Next Level", "Ground Level", "Sea Level", "Street Level"],
+                correct: 0
+            },
+            {
+                q: "What does Dhanalakshmi deserve today? 👑",
+                options: ["Cake", "Gifts", "Love", "ALL OF THE ABOVE!"],
+                correct: 3
+            },
+            {
+                q: "'Full tank ah irukku' means... ⛽",
+                options: ["I'm full", "I'm tired", "I'm energetic", "I'm sleepy"],
+                correct: 2
+            }
+        ];
+
+        let triviaIndex = 0;
+        let triviaScore = 0;
+        let triviaTotal = 0;
+
+        function startTrivia() {
+            triviaIndex = 0;
+            triviaScore = 0;
+            triviaTotal = 0;
+            showTriviaQuestion();
+        }
+
+        function showTriviaQuestion() {
+            if (triviaIndex >= triviaQuestions.length) {
+                document.getElementById('triviaQuestion').textContent =
+                    `🎉 Quiz Complete! Score: ${triviaScore}/${triviaTotal} 🎉`;
+                document.getElementById('triviaOptions').innerHTML = '';
+                document.getElementById('triviaScore').textContent = `Final Score: ${triviaScore}/${triviaTotal}`;
+                if (triviaScore === triviaTotal) {
+                    createConfetti(80);
+                    launchFireworks();
+                }
+                return;
+            }
+
+            const q = triviaQuestions[triviaIndex];
+            document.getElementById('triviaQuestion').textContent = `Q${triviaIndex + 1}: ${q.q}`;
+            document.getElementById('triviaScore').textContent = `Score: ${triviaScore}/${triviaTotal}`;
+
+            const optionsDiv = document.getElementById('triviaOptions');
+            optionsDiv.innerHTML = '';
+
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('div');
+                btn.className = 'trivia-option';
+                btn.textContent = opt;
+                btn.onclick = function() {
+                    if (this.classList.contains('correct') || this.classList.contains('wrong')) return;
+                    triviaTotal++;
+                    if (idx === q.correct) {
+                        this.classList.add('correct');
+                        triviaScore++;
+                        createConfetti(20);
+                    } else {
+                        this.classList.add('wrong');
+                        document.querySelectorAll('.trivia-option')[q.correct].classList.add('correct');
+                    }
+                    document.getElementById('triviaScore').textContent = `Score: ${triviaScore}/${triviaTotal}`;
+                    setTimeout(() => {
+                        triviaIndex++;
+                        showTriviaQuestion();
+                    }, 1200);
+                };
+                optionsDiv.appendChild(btn);
+            });
+        }
+
+        // ============= TAB SWITCHING =============
+        function switchGame(game, tab) {
+            document.querySelectorAll('.game').forEach(g => g.classList.remove('active'));
+            document.querySelectorAll('.game-tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(`game-${game}`).classList.add('active');
+            tab.classList.add('active');
+
+            if (game === 'balloon') startBalloonGame();
+            if (game === 'memory') startMemoryGame();
+            if (game === 'trivia') startTrivia();
+        }
+
+        // ============= CONFETTI =============
+        function createConfetti(count = 50) {
+            const colors = ['#FF1493', '#FFD700', '#FF6347', '#32CD32', '#1E90FF', '#9932CC', '#00CED1', '#FF4500', '#FF69B4'];
+            for (let i = 0; i < count; i++) {
+                const el = document.createElement('div');
+                el.className = 'confetti-piece';
+                el.style.left = Math.random() * 100 + 'vw';
+                el.style.background = colors[Math.floor(Math.random() * colors.length)];
+                el.style.width = (5 + Math.random() * 10) + 'px';
+                el.style.height = (5 + Math.random() * 10) + 'px';
+                el.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+                el.style.animationDuration = (3 + Math.random() * 3) + 's';
+                el.style.animationDelay = Math.random() * 2 + 's';
+                document.body.appendChild(el);
+                setTimeout(() => el.remove(), 6000);
+            }
+        }
+
+        // ============= FIREWORKS =============
+        function launchFireworks() {
+            for (let f = 0; f < 5; f++) {
+                setTimeout(() => {
+                    const firework = document.createElement('div');
+                    firework.className = 'firework';
+                    firework.style.left = (10 + Math.random() * 80) + 'vw';
+                    firework.style.top = (10 + Math.random() * 40) + 'vh';
+
+                    const colors = ['#FF1493', '#FFD700', '#FF6347', '#32CD32', '#1E90FF', '#9932CC', '#00CED1'];
+                    const numParticles = 20 + Math.floor(Math.random() * 20);
+
+                    for (let i = 0; i < numParticles; i++) {
+                        const particle = document.createElement('div');
+                        particle.className = 'firework-particle';
+                        const angle = (Math.PI * 2 * i) / numParticles;
+                        const distance = 50 + Math.random() * 100;
+                        particle.style.setProperty('--tx', Math.cos(angle) * distance + 'px');
+                        particle.style.setProperty('--ty', Math.sin(angle) * distance + 'px');
+                        particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                        particle.style.animationDuration = (0.5 + Math.random() * 0.5) + 's';
+                        firework.appendChild(particle);
+                    }
+
+                    document.body.appendChild(firework);
+                    setTimeout(() => firework.remove(), 2000);
+                }, f * 400);
+            }
+        }
+
+        // ============= FLOATING EMOJIS =============
+        function createFloatingEmojis() {
+            const emojis = ['🎂', '🎈', '🎉', '🎊', '✨', '💖', '🌟', '🎁', '🥳', '🎀', '💫', '⭐', '🔥', '👑'];
+            for (let i = 0; i < 15; i++) {
+                const el = document.createElement('div');
+                el.className = 'floating-emoji';
+                el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                el.style.left = Math.random() * 100 + 'vw';
+                el.style.fontSize = (20 + Math.random() * 25) + 'px';
+                el.style.animationDuration = (6 + Math.random() * 6) + 's';
+                el.style.animationDelay = Math.random() * 8 + 's';
+                document.body.appendChild(el);
+            }
+        }
+
+        // ============= INIT =============
+        createFloatingEmojis();
+        startBalloonGame();
+        startMemoryGame();
+        startTrivia();
+
+        // Auto-fireworks on load
+        setTimeout(() => {
+            createConfetti(100);
+            launchFireworks();
+        }, 1000);
+
+        // Click anywhere for mini celebration
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.game-btn') || e.target.closest('.balloon') ||
+                e.target.closest('.memory-card') || e.target.closest('.trivia-option') ||
+                e.target.closest('.tamil-dialogue-box') || e.target.closest('.cake')) return;
+            createConfetti(20);
+        });
+    </script>
+<audio id="bgm" loop preload="auto" src="bgm/bgm.mp3"></audio>
+<script>
+(function(){var a=document.getElementById('bgm');a.volume=0.3;function p(){a.play();document.removeEventListener('click',p);document.removeEventListener('touchstart',p);}a.play().catch(function(){document.addEventListener('click',p);document.addEventListener('touchstart',p);});})();
+</script>
+</body>
+</html>

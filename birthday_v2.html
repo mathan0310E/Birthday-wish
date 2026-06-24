@@ -1,0 +1,693 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎂 Happy Birthday Dhanalakshmi! 🎉</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Baloo+2:wght@400;700;800&family=Dancing+Script:wght@400;700&family=Quicksand:wght@300;400;600;700&family=Titan+One&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Quicksand',sans-serif;background:#0a0015;min-height:100vh;overflow-x:hidden;color:#e0e0ff}
+body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 20% 50%,rgba(101,31,255,0.08) 0%,transparent 60%),radial-gradient(ellipse at 80% 50%,rgba(0,229,255,0.06) 0%,transparent 60%);pointer-events:none;z-index:0}
+.particle{position:fixed;pointer-events:none;z-index:0;opacity:.25;animation:particleFloat linear infinite}
+@keyframes particleFloat{0%{transform:translateY(100vh) rotate(0deg) scale(1);opacity:.25}100%{transform:translateY(-100px) rotate(720deg) scale(0);opacity:0}}
+.splash{position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at center,#1a0030,#0a0015);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:10000;transition:opacity .8s ease,transform .8s ease}
+.splash.hidden{opacity:0;transform:scale(1.1);pointer-events:none}
+.splash h1{font-family:'Dancing Script',cursive;font-size:5em;color:#b388ff;text-shadow:0 0 40px rgba(179,136,255,0.4),0 0 80px rgba(179,136,255,0.2)}
+.splash .sub{font-family:'Quicksand',sans-serif;font-size:1.3em;color:#00e5ff;margin:10px 0;font-weight:300;letter-spacing:4px;text-transform:uppercase;text-shadow:0 0 20px rgba(0,229,255,0.3)}
+.splash .enter-btn{margin-top:40px;padding:16px 60px;border:2px solid #b388ff;background:rgba(20,0,50,0.5);color:#b388ff;font-size:1.2em;font-weight:600;cursor:pointer;transition:all .4s;font-family:'Quicksand',sans-serif;letter-spacing:3px;text-transform:uppercase;border-radius:50px;backdrop-filter:blur(10px);box-shadow:0 0 30px rgba(179,136,255,0.15)}
+.splash .enter-btn:hover{background:#b388ff;color:#0a0015;box-shadow:0 0 60px rgba(179,136,255,0.4),0 10px 40px rgba(179,136,255,0.2)}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(10,0,20,0.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(179,136,255,0.15);display:flex;align-items:center;justify-content:space-between;padding:12px 25px;transform:translateY(-100%);transition:transform .5s ease}
+.navbar.visible{transform:translateY(0)}
+.navbar .logo{font-family:'Dancing Script',cursive;font-size:1.5em;color:#b388ff;text-shadow:0 0 20px rgba(179,136,255,0.3)}
+.nav-links{display:flex;gap:4px;flex-wrap:wrap}
+.nav-link{padding:8px 18px;border:none;background:transparent;color:#b388ff;font-size:.85em;font-weight:600;cursor:pointer;transition:all .3s;font-family:'Quicksand',sans-serif;white-space:nowrap;letter-spacing:1px;border-radius:25px}
+.nav-link:hover{background:rgba(179,136,255,0.1);color:#00e5ff}
+.nav-link.active{background:linear-gradient(135deg,#b388ff,#7c4dff);color:#fff;box-shadow:0 0 30px rgba(179,136,255,0.3)}
+.main-content{margin-top:75px;padding:15px;max-width:1000px;margin-left:auto;margin-right:auto}
+.page{display:none;animation:softFade .6s ease}
+.page.active{display:block}
+@keyframes softFade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+.glass{background:rgba(15,0,35,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(179,136,255,0.15);border-radius:32px;padding:30px;margin-bottom:20px;box-shadow:0 8px 32px rgba(0,0,0,0.3),inset 0 1px 0 rgba(179,136,255,0.05)}
+.hero{text-align:center;padding:40px 20px}
+.hero h1{font-family:'Dancing Script',cursive;font-size:5em;color:#b388ff;line-height:1.1;text-shadow:0 0 40px rgba(179,136,255,0.3),0 0 80px rgba(179,136,255,0.1)}
+.hero .subtitle{font-family:'Quicksand',sans-serif;font-size:1.2em;color:#00e5ff;margin:10px 0 20px;font-weight:300;letter-spacing:6px;text-transform:uppercase;text-shadow:0 0 20px rgba(0,229,255,0.2)}
+.name-glow{display:inline-block;font-family:'Dancing Script',cursive;font-size:3.5em;color:#e040fb;text-shadow:0 0 40px rgba(224,64,251,0.3),0 0 80px rgba(224,64,251,0.1)}
+.hero-buttons{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:25px 0}
+.hero-btn{padding:12px 28px;border:1px solid rgba(179,136,255,0.2);background:rgba(15,0,35,0.4);color:#b388ff;font-size:.95em;font-weight:600;cursor:pointer;transition:all .3s;font-family:'Quicksand',sans-serif;letter-spacing:1.5px;border-radius:25px;backdrop-filter:blur(5px)}
+.hero-btn:hover{background:#b388ff;color:#0a0015;box-shadow:0 0 30px rgba(179,136,255,0.3);transform:translateY(-2px)}
+.hero-btn.pink{border-color:rgba(0,229,255,0.2);color:#00e5ff}
+.hero-btn.pink:hover{background:#00e5ff;color:#0a0015;box-shadow:0 0 30px rgba(0,229,255,0.3)}
+.hero-stats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:25px}
+.hero-stat{background:rgba(15,0,35,0.5);border:1px solid rgba(179,136,255,0.1);border-radius:20px;padding:12px 20px;text-align:center;min-width:100px}
+.hero-stat .num{font-family:'Dancing Script',cursive;font-size:2em;color:#b388ff;text-shadow:0 0 20px rgba(179,136,255,0.2)}
+.hero-stat .lbl{font-size:.75em;color:#00e5ff;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+.td-page{text-align:center}
+.td-page h2{font-family:'Fredoka One',cursive;font-size:2em;color:#fff;margin-bottom:10px;text-shadow:0 0 30px rgba(179,136,255,0.4);letter-spacing:2px}
+.td-card{position:relative;background:linear-gradient(145deg,#651fff,#311b92);border-radius:40px;padding:50px 35px 40px;min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:all .5s;border:1px solid rgba(179,136,255,0.2);box-shadow:0 20px 60px rgba(101,31,255,0.3),0 0 40px rgba(101,31,255,0.1);overflow:hidden}
+.td-card:hover{transform:translateY(-5px);box-shadow:0 30px 80px rgba(101,31,255,0.4)}
+.td-card::before{content:'';position:absolute;top:-60%;left:-60%;width:220%;height:220%;background:radial-gradient(circle,rgba(255,255,255,0.06) 0%,transparent 60%);animation:tdShine 6s linear infinite}
+@keyframes tdShine{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.td-card .td-badge{position:absolute;top:-15px;padding:8px 28px;border-radius:50px;font-family:'Fredoka One',cursive;font-size:1.1em;text-transform:uppercase;letter-spacing:3px;box-shadow:0 4px 20px rgba(0,0,0,0.2);animation:tdBadgePulse 2s ease-in-out infinite;z-index:2}
+.td-card .td-badge.truth{background:linear-gradient(135deg,#FF6B6B,#ee5a24);color:#fff}
+.td-card .td-badge.dare{background:linear-gradient(135deg,#48dbfb,#0abde3);color:#fff}
+@keyframes tdBadgePulse{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.td-card .td-question{font-family:'Fredoka One',cursive;font-size:1.7em;color:#fff;line-height:1.4;margin:30px 0 20px;position:relative;z-index:1;text-shadow:0 2px 10px rgba(0,0,0,0.1)}
+.td-card .td-icon{font-size:4em;position:relative;z-index:1;margin-bottom:5px;animation:tdBounce 2s ease-in-out infinite}
+@keyframes tdBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.td-card .td-hint{color:rgba(255,255,255,0.5);font-size:.8em;letter-spacing:2px;text-transform:uppercase;font-weight:700;position:relative;z-index:1}
+.td-controls{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:25px}
+.td-btn{padding:14px 35px;border:none;border-radius:50px;font-family:'Fredoka One',cursive;font-size:1em;cursor:pointer;transition:all .3s;letter-spacing:2px;text-transform:uppercase}
+.td-btn.truth{border:2px solid #FF6B6B;background:rgba(255,107,107,0.1);color:#FF6B6B}
+.td-btn.truth:hover{background:#FF6B6B;color:#fff;box-shadow:0 8px 30px rgba(255,107,107,0.3);transform:translateY(-3px)}
+.td-btn.dare{border:2px solid #48dbfb;background:rgba(72,219,251,0.1);color:#48dbfb}
+.td-btn.dare:hover{background:#48dbfb;color:#fff;box-shadow:0 8px 30px rgba(72,219,251,0.3);transform:translateY(-3px)}
+.td-btn.shuffle{padding:14px 30px;background:linear-gradient(135deg,#b388ff,#7c4dff);color:#fff;box-shadow:0 0 30px rgba(179,136,255,0.2)}
+.td-btn.shuffle:hover{box-shadow:0 0 60px rgba(179,136,255,0.4);transform:translateY(-3px)}
+.td-spin{animation:tdSpin .6s ease}
+@keyframes tdSpin{0%{transform:scale(1) rotate(0deg)}30%{transform:scale(1.1) rotate(10deg)}60%{transform:scale(0.9) rotate(-5deg)}100%{transform:scale(1) rotate(0deg)}}
+.cake-page{text-align:center}
+.cake-page h2{font-family:'Quicksand',sans-serif;font-size:1.6em;color:#b388ff;margin-bottom:10px;font-weight:700;text-shadow:0 0 20px rgba(179,136,255,0.2)}
+.cake-stage{position:relative;width:100%;max-width:500px;margin:30px auto;perspective:800px}
+.cake-3d{position:relative;width:300px;height:220px;margin:0 auto;cursor:pointer;transition:transform .5s}
+.cake-3d:hover{transform:rotateY(8deg)}
+.cake-tier{position:absolute;left:50%;transform:translateX(-50%);width:100%;height:70px;bottom:0;background:linear-gradient(180deg,#b388ff,#7c4dff);border-radius:16px 16px 20px 20px;display:flex;align-items:center;justify-content:center;font-size:1.8em;box-shadow:0 4px 15px rgba(179,136,255,0.3),0 0 30px rgba(179,136,255,0.1)}
+.cake-tier:nth-child(2){width:88%;height:60px;bottom:65px;background:linear-gradient(180deg,#7c4dff,#651fff);border-radius:16px 16px 8px 8px}
+.cake-tier:nth-child(3){width:76%;height:55px;bottom:120px;background:linear-gradient(180deg,#651fff,#311b92);border-radius:20px 20px 8px 8px}
+.candle-set{position:absolute;top:-35px;left:50%;transform:translateX(-50%);display:flex;gap:18px}
+.candle-item{width:14px;height:40px;background:linear-gradient(180deg,#b388ff,#651fff);border-radius:7px 7px 3px 3px;position:relative;animation:candleSway 1s ease-in-out infinite alternate}
+.candle-item:nth-child(2){height:44px;animation-delay:.2s}
+.candle-item:nth-child(3){height:36px;animation-delay:.4s}
+.candle-item:nth-child(4){height:40px;animation-delay:.1s}
+.candle-item:nth-child(5){height:34px;animation-delay:.3s}
+.candle-item .flame{position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:10px;height:16px;background:radial-gradient(ellipse,#fff,#00e5ff,#b388ff);border-radius:50%;animation:flameDance .2s ease-in-out infinite alternate;box-shadow:0 0 20px rgba(0,229,255,0.6)}
+@keyframes flameDance{0%{transform:translateX(-50%) scale(1) rotate(-2deg)}100%{transform:translateX(-50%) scale(1.15,0.85) rotate(2deg)}}
+@keyframes candleSway{0%{transform:rotate(-2deg)}100%{transform:rotate(2deg)}}
+.cake-3d.blown .flame{display:none}
+.cake-3d.blown .candle-item{background:#b0bec5;box-shadow:none}
+.blow-status{font-size:1.1em;color:#b388ff;margin:15px 0;min-height:30px;font-weight:600;text-shadow:0 0 15px rgba(179,136,255,0.2)}
+.celebration-text{display:none;font-family:'Dancing Script',cursive;font-size:3em;color:#e040fb;text-shadow:0 0 40px rgba(224,64,251,0.3);margin:20px 0}
+.celebration-text.show{display:block}
+.games-page h2{font-family:'Quicksand',sans-serif;font-size:1.5em;color:#b388ff;text-align:center;margin-bottom:20px;font-weight:700;text-shadow:0 0 20px rgba(179,136,255,0.2)}
+.game-selector{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.game-btn-select{padding:10px 22px;border:1px solid rgba(179,136,255,0.2);background:rgba(15,0,35,0.4);color:#b388ff;font-size:.85em;font-weight:600;cursor:pointer;transition:all .3s;font-family:'Quicksand',sans-serif;letter-spacing:1px;border-radius:20px}
+.game-btn-select:hover,.game-btn-select.active{border-color:#b388ff;color:#0a0015;background:#b388ff;box-shadow:0 0 30px rgba(179,136,255,0.3)}
+.game-panel{display:none;background:rgba(15,0,35,0.4);border-radius:24px;padding:25px;border:1px solid rgba(179,136,255,0.1)}
+.game-panel.active{display:block}
+.game-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:15px}
+.game-header h3{font-size:1.2em;color:#b388ff;font-weight:700}
+.game-score-display{font-size:.9em;color:#00e5ff;font-weight:600;letter-spacing:1px}
+.balloon-area{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;min-height:280px;padding:15px}
+.bpop{width:56px;height:70px;border-radius:50% 50% 50% 50%/40% 40% 60% 60%;position:relative;cursor:pointer;transition:transform .15s;animation:bSway 2s ease-in-out infinite;border:1px solid rgba(255,255,255,0.15)}
+.bpop::after{content:'';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);width:2px;height:12px;background:rgba(179,136,255,0.2)}
+@keyframes bSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+.bpop.popped{animation:bPop .35s forwards}
+@keyframes bPop{0%{transform:scale(1);opacity:1}30%{transform:scale(1.3);opacity:.7}100%{transform:scale(0);opacity:0}}
+.click-area{width:100%;max-width:400px;margin:20px auto;padding:50px 20px;background:rgba(15,0,35,0.4);border:2px dashed rgba(179,136,255,0.12);border-radius:24px;text-align:center;cursor:pointer;transition:all .3s;user-select:none}
+.click-area:hover{background:rgba(15,0,35,0.6)}
+.click-area .click-count{font-family:'Dancing Script',cursive;font-size:4.5em;color:#b388ff;text-shadow:0 0 30px rgba(179,136,255,0.2)}
+.click-area .click-label{font-size:1em;color:#00e5ff;font-weight:600;letter-spacing:2px;text-transform:uppercase}
+.click-timer{font-size:1.2em;color:#b388ff;text-align:center;font-weight:600}
+.mole-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:380px;margin:15px auto}
+.mole-hole{aspect-ratio:1;border-radius:50%;background:rgba(15,0,35,0.5);display:flex;align-items:center;justify-content:center;font-size:3em;cursor:pointer;transition:all .2s;border:2px solid rgba(179,136,255,0.08)}
+.mole-hole.has-mole{background:rgba(179,136,255,0.15);border-color:#b388ff;box-shadow:0 0 25px rgba(179,136,255,0.2)}
+.mole-hole.has-mole::after{content:'🐹';font-size:2.5em;animation:moleWiggle .4s ease-in-out infinite}
+@keyframes moleWiggle{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.mole-hole.whacked{background:#b388ff;border-color:#b388ff;box-shadow:0 0 30px rgba(179,136,255,0.3)}
+.mole-hole.whacked::after{content:'✨';font-size:2em}
+.trivia-q{font-size:1.2em;text-align:center;color:#b388ff;margin:15px 0;font-weight:600}
+.trivia-opts{display:flex;flex-direction:column;gap:10px;max-width:450px;margin:0 auto}
+.trivia-opt{padding:12px 20px;border:1px solid rgba(179,136,255,0.08);background:rgba(15,0,35,0.4);color:#e0e0ff;font-size:1em;cursor:pointer;transition:all .3s;font-family:'Quicksand',sans-serif;text-align:left;border-radius:16px;font-weight:600}
+.trivia-opt:hover{border-color:#b388ff;background:rgba(179,136,255,0.1)}
+.trivia-opt.correct{border-color:#81c784;background:rgba(129,199,132,0.15);color:#4caf50}
+.trivia-opt.wrong{border-color:#ef9a9a;background:rgba(239,154,154,0.15);color:#e53935}
+.wishes-page{text-align:center;position:relative}
+.wishes-page h2{font-family:'Quicksand',sans-serif;font-size:1.5em;color:#b388ff;text-align:center;margin-bottom:20px;font-weight:700;text-shadow:0 0 20px rgba(179,136,255,0.2)}
+.wish-card{background:rgba(15,0,35,0.5);border-radius:24px;padding:30px;margin-bottom:20px;border:1px solid rgba(179,136,255,0.12);text-align:center}
+.wish-card .wish-icon{font-size:3em;margin-bottom:10px}
+.wish-card .wish-name{font-family:'Dancing Script',cursive;font-size:1.8em;color:#b388ff;text-shadow:0 0 20px rgba(179,136,255,0.2)}
+.wish-card .wish-msg{color:#fff;font-size:1.1em;margin:15px 0;line-height:1.8;font-weight:500;text-shadow:0 1px 4px rgba(0,0,0,0.2)}
+.wish-card .wish-time{color:#00e5ff;font-size:.7em;font-weight:600;letter-spacing:1px}
+.wish-form{background:rgba(15,0,35,0.5);backdrop-filter:blur(10px);border-radius:28px;padding:30px;border:1px solid rgba(179,136,255,0.12)}
+.wish-form h3{font-family:'Dancing Script',cursive;font-size:1.5em;color:#b388ff;margin-bottom:18px;text-shadow:0 0 20px rgba(179,136,255,0.15)}
+.wish-form .form-row{display:flex;flex-direction:column;gap:12px;max-width:480px;margin:0 auto}
+.wish-form input,.wish-form textarea{padding:14px 18px;border:1px solid rgba(179,136,255,0.2);background:rgba(30,0,60,0.7);color:#fff;font-size:1em;font-family:'Quicksand',sans-serif;transition:all .3s;outline:none;border-radius:16px;font-weight:600;backdrop-filter:blur(4px)}
+.wish-form input:focus,.wish-form textarea:focus{border-color:#b388ff;box-shadow:0 0 30px rgba(179,136,255,0.2)}
+.wish-form input::placeholder,.wish-form textarea::placeholder{color:rgba(255,255,255,0.4)}
+.wish-form textarea{min-height:80px;resize:vertical}
+.wish-form button{padding:14px 40px;border:none;background:linear-gradient(135deg,#b388ff,#7c4dff);color:#fff;font-size:1em;font-weight:700;cursor:pointer;transition:all .3s;font-family:'Quicksand',sans-serif;letter-spacing:2px;border-radius:25px;margin-top:5px;box-shadow:0 0 30px rgba(179,136,255,0.2)}
+.wish-form button:hover{box-shadow:0 0 50px rgba(179,136,255,0.4);transform:translateY(-2px)}
+.wish-count{color:#00e5ff;font-size:.7em;margin-top:12px;font-family:'Quicksand',sans-serif;font-weight:600;letter-spacing:1.5px}
+.mem-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:380px;margin:15px auto}
+.mem-card{aspect-ratio:1;background:linear-gradient(135deg,#651fff,#311b92);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2em;cursor:pointer;transition:all .3s;user-select:none;border:1px solid rgba(179,136,255,0.2);box-shadow:0 0 15px rgba(101,31,255,0.15)}
+.mem-card.flipped{background:rgba(25,0,50,0.9);transform:rotateY(180deg);border-color:#b388ff;box-shadow:0 0 30px rgba(179,136,255,0.2)}
+.mem-card.matched{background:rgba(0,229,255,0.15);cursor:default;opacity:.6;transform:scale(.9);border-color:#00e5ff;box-shadow:0 0 20px rgba(0,229,255,0.1)}
+.countdown-bar{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:15px 0}
+.countdown-item{background:rgba(15,0,35,0.5);border:1px solid rgba(179,136,255,0.12);border-radius:20px;padding:12px 15px;text-align:center;min-width:75px;backdrop-filter:blur(10px)}
+.countdown-item .cd-num{font-family:'Dancing Script',cursive;font-size:2.2em;color:#b388ff;text-shadow:0 0 20px rgba(179,136,255,0.2)}
+.countdown-item .cd-lbl{font-size:.65em;color:#00e5ff;letter-spacing:1.5px;text-transform:uppercase;font-weight:600}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px;margin:20px 0}
+.gallery-item{aspect-ratio:1;border-radius:20px;background:rgba(15,0,35,0.4);display:flex;align-items:center;justify-content:center;font-size:2.5em;border:1px solid rgba(179,136,255,0.1);transition:all .3s;cursor:pointer}
+.gallery-item:hover{transform:scale(1.08);border-color:#b388ff;box-shadow:0 0 30px rgba(179,136,255,0.2)}
+@keyframes cdPulse{0%{transform:scale(1);box-shadow:0 0 30px rgba(179,136,255,0.3)}50%{transform:scale(1.08);box-shadow:0 0 60px rgba(179,136,255,0.5)}100%{transform:scale(1);box-shadow:0 0 30px rgba(179,136,255,0.3)}}
+.cd-active #cd10circle{animation:cdPulse .5s ease-in-out infinite}
+.bd-popup{position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.5);backdrop-filter:blur(10px)}
+.bd-popup.show{display:flex}
+.bd-popup .bd-box{background:linear-gradient(135deg,#311b92 0%,#1a0030 50%,#651fff 100%);border-radius:40px;padding:45px 35px 40px;max-width:480px;width:92%;position:relative;box-shadow:0 30px 80px rgba(101,31,255,0.3),0 0 60px rgba(101,31,255,0.1);animation:bdPop .6s;text-align:center;overflow:hidden;border:1px solid rgba(179,136,255,0.15)}
+.bd-popup .bd-box::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,0.08) 0%,transparent 60%);animation:bdShine 4s ease-in-out infinite}
+@keyframes bdShine{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+@keyframes bdPop{0%{transform:scale(.3) rotate(10deg);opacity:0}60%{transform:scale(1.05) rotate(-2deg)}100%{transform:scale(1) rotate(0);opacity:1}}
+.bd-popup .bd-floating{position:absolute;font-size:1.8em;animation:bdFloat linear infinite;pointer-events:none;z-index:0}
+@keyframes bdFloat{0%{transform:translateY(0) rotate(0deg);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-300px) rotate(360deg);opacity:0}}
+.bd-popup .bd-icon{font-size:4.5em;margin-bottom:10px;display:inline-block;animation:bdBounce 2s ease-in-out infinite;position:relative;z-index:1;filter:drop-shadow(0 4px 15px rgba(255,255,255,0.3))}
+@keyframes bdBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.bd-popup .bd-title{font-family:'Dancing Script',cursive;font-size:3em;color:#fff;line-height:1.2;position:relative;z-index:1;text-shadow:0 0 30px rgba(179,136,255,0.4),0 0 60px rgba(179,136,255,0.2)}
+.bd-popup .bd-sub{font-size:1.3em;color:rgba(255,255,255,0.95);margin:12px 0 8px;line-height:1.4;font-weight:700;position:relative;z-index:1;letter-spacing:2px;text-transform:uppercase}
+.bd-popup .bd-sub span{display:inline-block;animation:bdGlow 1.5s ease-in-out infinite alternate}
+@keyframes bdGlow{0%{text-shadow:0 0 10px rgba(179,136,255,0.3)}100%{text-shadow:0 0 40px rgba(224,64,251,0.8),0 0 80px rgba(224,64,251,0.4)}}
+.bd-popup .bd-msg{font-size:1em;color:rgba(255,255,255,0.85);line-height:1.6;margin:12px 0 22px;position:relative;z-index:1;font-weight:500}
+.bd-popup .bd-btn{padding:16px 48px;border:2px solid rgba(255,255,255,0.3);background:rgba(255,255,255,0.15);color:#fff;font-size:1em;font-weight:700;cursor:pointer;border-radius:50px;font-family:'Quicksand',sans-serif;letter-spacing:3px;text-transform:uppercase;backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(0,0,0,0.1);transition:all .4s;position:relative;z-index:1}
+.bd-popup .bd-btn:hover{background:rgba(255,255,255,0.3);transform:translateY(-3px) scale(1.05);box-shadow:0 10px 40px rgba(0,0,0,0.2)}
+.confetti{position:fixed;width:8px;height:8px;top:-10px;z-index:9999;pointer-events:none;animation:confettiFall linear forwards;border-radius:50%;box-shadow:0 0 6px currentColor}
+@keyframes confettiFall{0%{transform:translateY(0) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}
+.firework{position:fixed;pointer-events:none;z-index:9998}
+.fw-particle{position:absolute;width:8px;height:8px;border-radius:50%;animation:fwBurst 1s ease-out forwards;box-shadow:0 0 8px currentColor}
+@keyframes fwBurst{0%{transform:translate(0,0) scale(1.2);opacity:1}30%{opacity:1}100%{transform:translate(var(--tx),var(--ty)) scale(0);opacity:0}}
+@media(max-width:700px){.hero h1{font-size:3em}.splash h1{font-size:3.5em}.navbar{padding:8px 12px}.nav-link{font-size:.7em;padding:6px 12px}.dialogue-display .tamil-text{font-size:1.3em}.cake-3d{width:220px;height:170px}.cake-tier{height:50px}.cake-tier:nth-child(2){height:45px;bottom:48px}.cake-tier:nth-child(3){height:40px;bottom:90px}.mem-grid{grid-template-columns:repeat(3,1fr)}.mole-grid{gap:8px}}
+</style>
+</head>
+<body>
+<!-- SPLASH -->
+<div class="splash" id="splash">
+  <h1>🎉 WELCOME! 🎉</h1>
+  <div class="sub">✨ Something Special Awaits ✨</div>
+  <div style="font-size:4em;margin:20px 0;">🎂</div>
+  <button class="enter-btn" onclick="enterSite()">👉 Enter Here 👈</button>
+</div>
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <div class="logo">🎂 Dhanalakshmi</div>
+  <div class="nav-links">
+    <button class="nav-link active" data-page="hero">🏠 Home</button>
+    <button class="nav-link" data-page="tamil">🎯 T/D</button>
+    <button class="nav-link" data-page="cake">🎂 Cake</button>
+    <button class="nav-link" data-page="games">🎮 Games</button>
+    <button class="nav-link" data-page="wishes">💝 Wishes</button>
+  </div>
+</nav>
+<div class="main-content">
+<!-- HERO PAGE -->
+<div class="page active" id="page-hero">
+  <div class="glass hero">
+    <h1>🎉 Happiest Birthday! 🎉</h1>
+    <div class="subtitle" style="font-family:'Dancing Script',cursive;font-size:2em;">For My Dearest Dhanalakshmi</div>
+    <div class="name-glow" style="font-size:2.5em;">✨ Dhanalakshmi ✨</div>
+    <div style="margin:15px 0;font-size:1.2em;color:rgba(255,255,255,0.7);font-family:'Dancing Script',cursive;">🎂 Happy Birthday! 🎂</div>
+    <div class="countdown-bar">
+      <div class="countdown-item"><div class="cd-num" id="cd-years" style="font-size:2.5em;">🎉</div><div class="cd-lbl">IT'S HER DAY</div></div>
+      <div class="countdown-item"><div class="cd-num" id="cd-days" style="font-size:2.5em;">🎂</div><div class="cd-lbl">HAPPY BIRTHDAY</div></div>
+      <div class="countdown-item"><div class="cd-num" id="cd-hours" style="font-size:2.5em;">🎈</div><div class="cd-lbl">DHANALAKSHMI</div></div>
+      <div class="countdown-item"><div class="cd-num" id="cd-mins" style="font-size:2.5em;">💖</div><div class="cd-lbl">SPECIAL ONE</div></div>
+      <div class="countdown-item"><div class="cd-num" id="cd-secs" style="font-size:2.5em;">🥳</div><div class="cd-lbl">LOVE YOU!</div></div>
+    </div>
+    <div class="hero-buttons">
+      <button class="hero-btn" onclick="navigateTo('tamil')">🎯 Truth or Dare</button>
+      <button class="hero-btn pink" onclick="navigateTo('cake')">🎂 Blow the Cake</button>
+      <button class="hero-btn" onclick="navigateTo('games')">🎮 Play Games</button>
+      <button class="hero-btn pink" onclick="navigateTo('wishes')">💝 My Wish For You</button>
+    </div>
+    <div style="margin:20px 0 10px">
+      <div id="countdown10" onclick="startBDCountdown()" style="display:inline-flex;flex-direction:column;align-items:center;cursor:pointer;transition:all .3s">
+        <div style="width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,#b388ff,#7c4dff);display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(179,136,255,0.3);transition:all .3s" id="cd10circle">
+          <span style="font-family:'Dancing Script',cursive;font-size:2.8em;color:#fff" id="cd10num">10</span>
+        </div>
+        <span style="font-size:.75em;color:#b388ff;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-top:6px;text-shadow:0 0 15px rgba(179,136,255,0.2)">🎯 Click for Surprise!</span>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">🎯</div><div class="lbl">T/D Game</div></div>
+      <div class="hero-stat"><div class="num">🎮</div><div class="lbl">5 Fun Games</div></div>
+      <div class="hero-stat"><div class="num">🎂</div><div class="lbl">Magical Cake</div></div>
+      <div class="hero-stat"><div class="num">💝</div><div class="lbl">Wish Wall</div></div>
+    </div>
+  </div>
+</div>
+<!-- TRUTH OR DARE PAGE -->
+<div class="page" id="page-tamil">
+  <div class="glass td-page">
+    <h2>🎯 Truth or Dare!</h2>
+    <div class="td-card" id="tdCard" onclick="shuffleTD()">
+      <div class="td-badge truth" id="tdBadge">TRUTH</div>
+      <div class="td-icon" id="tdIcon">🤔</div>
+      <div class="td-question" id="tdQuestion">Click to play! 🎉</div>
+      <div class="td-hint" id="tdHint">👇 Tap for a random question!</div>
+    </div>
+    <div class="td-controls">
+      <button class="td-btn truth" onclick="pickTruth(event)">🤔 TRUTH</button>
+      <button class="td-btn dare" onclick="pickDare(event)">🔥 DARE</button>
+      <button class="td-btn shuffle" onclick="shuffleTD(event)">🎲 Random</button>
+    </div>
+  </div>
+</div>
+<!-- CAKE PAGE -->
+<div class="page" id="page-cake">
+  <div class="glass cake-page">
+    <h2>🎂 Blow the Candles! 🎂</h2>
+    <p style="color:rgba(255,255,255,0.6);">Click the cake or say <strong>&quot;Poo&quot;</strong> 🎤</p>
+    <div class="cake-stage">
+      <div class="cake-3d" id="cake3d" onclick="blowOutCandles()">
+        <div class="candle-set" id="candleSet">
+          <div class="candle-item"><div class="flame"></div></div>
+          <div class="candle-item"><div class="flame"></div></div>
+          <div class="candle-item"><div class="flame"></div></div>
+          <div class="candle-item"><div class="flame"></div></div>
+          <div class="candle-item"><div class="flame"></div></div>
+        </div>
+        <div class="cake-tier">🍓</div>
+        <div class="cake-tier">🎉</div>
+        <div class="cake-tier">✨</div>
+      </div>
+    </div>
+    <div class="blow-status" id="blowStatus">Make a wish... 🎯</div>
+    <div class="celebration-text" id="celebrationText">🎉 WISH GRANTED! 🎉</div>
+    <div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap;margin-top:20px;">
+      <button class="hero-btn" onclick="blowOutCandles()">🎯 Blow Candles</button>
+      <button class="hero-btn pink" onclick="resetCandles()">🔄 Relight</button>
+      <button class="hero-btn" onclick="createConfetti(80); launchFireworks();">🎆 Celebrate!</button>
+    </div>
+  </div>
+</div>
+<!-- GAMES PAGE -->
+<div class="page" id="page-games">
+  <div class="glass games-page">
+    <h2>🎮 Fun Games Zone</h2>
+    <div class="game-selector">
+      <button class="game-btn-select active" data-game="balloon" onclick="switchGamePanel('balloon',this)">🎈 Pop</button>
+      <button class="game-btn-select" data-game="clicker" onclick="switchGamePanel('clicker',this)">👆 Click Speed</button>
+      <button class="game-btn-select" data-game="mole" onclick="switchGamePanel('mole',this)">🐹 Whack-a-Mole</button>
+      <button class="game-btn-select" data-game="trivia" onclick="switchGamePanel('trivia',this)">🤣 Quiz</button>
+      <button class="game-btn-select" data-game="memory" onclick="switchGamePanel('memory',this)">🧠 Memory</button>
+    </div>
+    <!-- BALLOON -->
+    <div class="game-panel active" id="panel-balloon">
+      <div class="game-header"><h3>🎈 Balloon Pop!</h3><div class="game-score-display" id="bScore">Popped: 0</div></div>
+      <div class="balloon-area" id="balloonArea"></div>
+      <button class="hero-btn" onclick="startBalloonGame()" style="margin:10px auto;display:block;">🔄 New Round</button>
+    </div>
+    <!-- CLICKER -->
+    <div class="game-panel" id="panel-clicker">
+      <div class="game-header"><h3>👆 Click Speed Test</h3><div class="game-score-display" id="cScore">Clicks: 0 | Time: 10s</div></div>
+      <div class="click-timer" id="clickTimer">⏱ 10s</div>
+      <div class="click-area" id="clickArea" onclick="handleClick()"><div class="click-count" id="clickCount">0</div><div class="click-label">Click Here Fast! 👆</div></div>
+      <button class="hero-btn" onclick="startClickGame()" style="margin:10px auto;display:block;">▶ Start</button>
+    </div>
+    <!-- MOLE -->
+    <div class="game-panel" id="panel-mole">
+      <div class="game-header"><h3>🐹 Whack-a-Mole!</h3><div class="game-score-display" id="mScore">Score: 0</div></div>
+      <div class="mole-grid" id="moleGrid"></div>
+      <button class="hero-btn" onclick="startMoleGame()" style="margin:10px auto;display:block;">🔄 New Game</button>
+    </div>
+    <!-- TRIVIA -->
+    <div class="game-panel" id="panel-trivia">
+      <div class="game-header"><h3>🤣 Fun Quiz</h3><div class="game-score-display" id="tScore">Score: 0/0</div></div>
+      <div class="trivia-q" id="triviaQ">Loading...</div>
+      <div class="trivia-opts" id="triviaOpts"></div>
+      <button class="hero-btn" onclick="startTrivia()" style="margin:15px auto;display:block;">🔄 New Quiz</button>
+    </div>
+    <!-- MEMORY -->
+    <div class="game-panel" id="panel-memory">
+      <div class="game-header"><h3>🧠 Memory Match</h3><div class="game-score-display" id="memScore">Moves: 0 | Matches: 0/6</div></div>
+      <div class="mem-grid" id="memGrid"></div>
+      <button class="hero-btn" onclick="startMemoryGame()" style="margin:10px auto;display:block;">🔄 New Game</button>
+    </div>
+  </div>
+</div>
+<!-- WISHES PAGE -->
+<div class="page" id="page-wishes">
+  <div class="glass wishes-page">
+    <h2>💝 Wishes For Dhanalakshmi ✨</h2>
+    <div id="wishContainer"></div>
+    <div class="wish-form">
+      <h3>💌 Add Your Wish</h3>
+      <form class="form-row" onsubmit="addWish(event)">
+        <input type="text" id="wishName" placeholder="Your Name" required>
+        <textarea id="wishMsg" placeholder="Write your wish for Dhanalakshmi..." required></textarea>
+        <button type="submit">💌 Send Wish 🎉</button>
+      </form>
+      <div class="wish-count" id="wishCount">🌟 Shining with Mathan's wish + yours!</div>
+    </div>
+  </div>
+</div>
+<!-- BIRTHDAY POPUP -->
+<div class="bd-popup" id="bdPopup">
+  <div class="bd-box" id="bdBox">
+    <div class="bd-icon">🎂</div>
+    <div class="bd-title">Happy Birthday!</div>
+    <div class="bd-sub"><span>✨ Dhanalakshmi ✨</span></div>
+    <div class="bd-msg">Wishing you endless joy, success, and amazing memories! You're one of a kind, and today is all about YOU! 💖🔥</div>
+    <button class="bd-btn" onclick="document.getElementById('bdPopup').classList.remove('show')">🥳 Let's Party! 🎉</button>
+  </div>
+</div>
+
+</div><!-- end main-content -->
+<script>
+const truthQ=[
+  'Who is the last person you stalked on Instagram? 👀',
+  "What's the biggest lie you've told your parents? 🤥",
+  'Have you ever had a crush on someone in this room? 😳',
+  "What's your most embarrassing chat or search history item? 🔍",
+  'If you had to marry one person from your contacts list, who would it be? 💍',
+  "What's the craziest thing you've done without telling anyone? 🤫",
+  'Who was your worst crush ever? 🙈',
+  "What's one thing you'd never tell your parents? 🤐",
+  'Have you ever pretended to like a gift you actually hated? 🎁',
+  "What's the weirdest dream you've ever had? 🌙",
+  'What is the most embarrassing DM you have ever sent? 💬',
+  'Have you ever Googled yourself? What did you find? 🔎',
+  'What is the pettiest reason you have stopped talking to someone? 🙄',
+  'Have you ever blamed a fart on someone else? 💨',
+  'What is the most illegal thing you have ever done? 😈',
+  'Have you ever read someone else\'s messages without permission? 📱',
+  'What is the most awkward thing you have done on a video call? 📹',
+  'Have you ever broken something and blamed it on someone else? 😅',
+  'What is the most childish thing you still do? 👶',
+  'Have you ever pretended to be sick to avoid something? 🤒',
+  'What is the worst date you have ever been on? 💔',
+  'Have you ever farted in an elevator and blamed someone else? 😂',
+  'What is the most embarrassing music in your playlist? 🎵',
+  'Have you ever stalked an ex on social media? 🕵️',
+  'What is the dumbest thing you have done for attention? 🎭',
+  'Have you ever saved someone\'s number under a fake name? 📞',
+  'What is the most embarrassing thing your parents have caught you doing? 👀',
+  'Have you ever had a crush on a friend\'s sibling? 💗',
+  'What is the most awkward conversation you have ever had? 🗣️',
+  'Have you ever laughed at something really inappropriate? 😬'
+];
+const dareQ=[
+  'Let the birthday girl send any emoji to your crush/best friend! 😈',
+  'Read your last 5 WhatsApp messages dramatically like a movie actor! 🎭',
+  'Post "I\'m secretly famous" on your status for 10 minutes! 📱',
+  'Call someone and convince them it\'s your birthday too! 📞',
+  'Do your best anime villain speech for 1 minute! 🦹',
+  'Recreate your most-used emoji with your face and hold it for 30 seconds! 😱',
+  'Let everyone scroll through your camera roll for 15 seconds! 📸',
+  'Talk in a baby voice until your next turn! 👶',
+  'Dance as if you\'re in a Bollywood movie for 1 minute! 💃',
+  'Act like the birthday girl\'s personal assistant for the next 15 minutes! 👑',
+  'Say 10 reasons why the birthday girl is awesome without stopping! 💖',
+  'Write a funny birthday poem in 60 seconds! 📝',
+  'Act out how the birthday girl behaves when she\'s angry! 😤',
+  'Imitate the birthday girl until someone guesses who you\'re acting as! 🎪',
+  'Make a fake award speech thanking the birthday girl for "changing your life"! 🏆',
+  'Eat a spoon of ketchup without making a face! 🍅',
+  'Sing a romantic song to a water bottle! 🎤',
+  'Propose to a chair like it\'s your true love! 💍',
+  'Act like a cat for 2 minutes (meow and everything)! 🐱',
+  'Narrate your life like an anime protagonist for 1 minute! 📺',
+  'Do your best celebrity impression for 30 seconds! 🌟',
+  'Let the group give you a new hairstyle (bed head is fine)! 💇',
+  'Talk with a British accent until your next turn! 🇬🇧',
+  'Take a selfie making the weirdest face possible! 🤪',
+  'Do 10 pushups while singing Happy Birthday! 💪',
+  'Speak in rhymes for the next 3 rounds! 🎵',
+  'Act like a waiter serving the birthday girl for 2 minutes! 🍽️',
+  'Do a dramatic slow-motion walk across the room! 🕺',
+  'Make up a rap about the birthday girl on the spot! 🎤',
+  'Pretend you\'re a news anchor reporting the birthday girl\'s life! 📰'
+];
+let tdType='truth';
+const triviaQ=[
+  {q:'&quot;என்ன ராஸ்கலா&quot; meaning?',o:['Hello','What a rascal','Good morning','Thank you'],c:1},
+  {q:'Best thing about Dhanalakshmi? 🌟',o:['Her smile','Her intelligence','Her kindness','ALL OF THE ABOVE!'],c:3},
+  {q:'How to celebrate her birthday? 🎉',o:['Party all night','Eat biryani','Dance','ALL OF THE ABOVE!'],c:3},
+  {q:'&quot;வெர லெவல்&quot; means? 🔥',o:['Next Level','Ground Level','Sea Level','Street Level'],c:0},
+  {q:'What does she deserve today? 👑',o:['Cake','Gifts','Love','ALL OF THE ABOVE!'],c:3},
+  {q:'&quot;Full tank ah irukku&quot; = ? ⛽',o:["I'm full","I'm tired","I'm energetic","I'm sleepy"],c:2},
+  {q:'Which Tamil word fits Dhanalakshmi? 💪',o:['ராஸ்கல்','வின்னர்','கெட்டி','ALL THREE!'],c:3},
+  {q:'Who is the most awesome person? 🤔',o:['You','Me','Dhanalakshmi!','Nobody'],c:2}
+];
+
+function enterSite(){document.getElementById('splash').classList.add('hidden');document.getElementById('navbar').classList.add('visible');createConfetti(80);launchFireworks();setTimeout(startBDCountdown,2000);var a=document.getElementById('bgm');a.volume=0.3;a.play();}
+function navigateTo(p){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById('page-'+p).classList.add('active');document.querySelectorAll('.nav-link').forEach(x=>x.classList.remove('active'));document.querySelector('.nav-link[data-page="'+p+'"]').classList.add('active');}
+document.querySelectorAll('.nav-link').forEach(b=>b.addEventListener('click',function(){navigateTo(this.dataset.page);}));
+
+// Truth or Dare
+function pickTruth(e){if(e)e.stopPropagation();tdType='truth';showTD();}
+function pickDare(e){if(e)e.stopPropagation();tdType='dare';showTD();}
+function shuffleTD(e){if(e)e.stopPropagation();tdType=Math.random()>.5?'truth':'dare';showTD();}
+function showTD(){
+  const card=document.getElementById('tdCard');
+  card.classList.add('td-spin');
+  setTimeout(()=>card.classList.remove('td-spin'),600);
+  const q=tdType==='truth'?truthQ:dareQ;
+  const idx=Math.floor(Math.random()*q.length);
+  const icons={truth:['🤔','😏','😳','🤫','😅','🤥','😬'],dare:['🔥','💃','🎤','📸','🎭','💪','✨']};
+  const ics=tdType==='truth'?icons.truth:icons.dare;
+  document.getElementById('tdBadge').textContent=tdType==='truth'?'TRUTH':'DARE';
+  document.getElementById('tdBadge').className='td-badge '+tdType;
+  document.getElementById('tdIcon').textContent=ics[Math.floor(Math.random()*ics.length)];
+  document.getElementById('tdQuestion').textContent=q[idx];
+  document.getElementById('tdHint').textContent='👇 Tap for another!';
+  createConfetti(12);
+}
+
+let candlesBlown=false;
+function blowOutCandles(){if(candlesBlown)return;candlesBlown=true;document.getElementById('cake3d').classList.add('blown');document.getElementById('blowStatus').textContent='🎉 Candles blown! Make a wish! 🎉';document.getElementById('celebrationText').classList.add('show');createConfetti(100);launchFireworks();}
+function resetCandles(){candlesBlown=false;document.getElementById('cake3d').classList.remove('blown');document.getElementById('blowStatus').textContent='Make a wish... 🎯';document.getElementById('celebrationText').classList.remove('show');}
+
+// Voice
+if('webkitSpeechRecognition'in window||'SpeechRecognition'in window){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;const rec=new SR();rec.lang='ta-IN';rec.continuous=true;rec.interimResults=false;rec.onresult=function(e){const t=Array.from(e.results).map(r=>r[0].transcript.toLowerCase()).join(' ');if(t.includes('poo')||t.includes('பூ'))blowOutCandles();};rec.start();}
+
+// Countdown
+function updateCountdown(){document.getElementById('cd-years').textContent='🎉';document.getElementById('cd-days').textContent='🎉';document.getElementById('cd-hours').textContent='🎉';document.getElementById('cd-mins').textContent='🎉';document.getElementById('cd-secs').textContent='🎉';}
+setInterval(updateCountdown,1000);updateCountdown();
+
+// Balloon
+let bScore=0;
+function startBalloonGame(){bScore=0;document.getElementById('bScore').textContent='Popped: 0';const c=document.getElementById('balloonArea');c.innerHTML='';const colors=['#FF1493','#FF6347','#FFD700','#32CD32','#1E90FF','#9932CC','#FF4500','#00CED1'];const n=20+Math.floor(Math.random()*10);for(let i=0;i<n;i++){const b=document.createElement('div');b.className='bpop';const col=colors[Math.floor(Math.random()*colors.length)];b.style.background='radial-gradient(ellipse at 30% 30%, rgba(255,255,255,0.8), '+col+')';b.style.animationDelay=(Math.random()*2)+'s';b.style.animationDuration=(1.5+Math.random()*1.5)+'s';b.onclick=function(){if(this.classList.contains('popped'))return;this.classList.add('popped');bScore++;document.getElementById('bScore').textContent='Popped: '+bScore;createConfetti(8);setTimeout(()=>this.remove(),350);};c.appendChild(b);}}
+
+// Click speed
+let clickCount=0,clickTimer=null,clickTimeLeft=10,clickRunning=false;
+function handleClick(){if(!clickRunning)return;clickCount++;document.getElementById('clickCount').textContent=clickCount;}
+function startClickGame(){clickCount=0;clickTimeLeft=10;clickRunning=true;document.getElementById('clickCount').textContent='0';document.getElementById('cScore').textContent='Clicks: 0 | Time: 10s';document.getElementById('clickTimer').textContent='⏱ 10s';clickTimer=setInterval(()=>{clickTimeLeft--;document.getElementById('clickTimer').textContent='⏱ '+clickTimeLeft+'s';if(clickTimeLeft<=0){clearInterval(clickTimer);clickRunning=false;document.getElementById('cScore').textContent='🎯 Final: '+clickCount+' clicks!';createConfetti(40);}},1000);}
+
+// Mole
+let moleScore=0,moleTimer=null,moleRunning=false;
+function startMoleGame(){moleScore=0;moleRunning=true;document.getElementById('mScore').textContent='Score: 0';const g=document.getElementById('moleGrid');g.innerHTML='';for(let i=0;i<9;i++){const h=document.createElement('div');h.className='mole-hole';h.dataset.idx=i;h.onclick=function(){if(this.classList.contains('has-mole')){this.classList.remove('has-mole');this.classList.add('whacked');moleScore++;document.getElementById('mScore').textContent='Score: '+moleScore;createConfetti(5);setTimeout(()=>this.classList.remove('whacked'),300);}};g.appendChild(h);}if(moleTimer)clearInterval(moleTimer);moleTimer=setInterval(()=>{document.querySelectorAll('.mole-hole.has-mole').forEach(x=>x.classList.remove('has-mole'));if(!moleRunning)return;const holes=document.querySelectorAll('.mole-hole:not(.whacked)');if(holes.length){const r=holes[Math.floor(Math.random()*holes.length)];r.classList.add('has-mole');setTimeout(()=>r.classList.remove('has-mole'),2000);}},1200);}
+
+// Trivia
+let tIdx=0,tScore=0,tTotal=0;
+function startTrivia(){tIdx=0;tScore=0;tTotal=0;showTrivia();}
+function showTrivia(){if(tIdx>=triviaQ.length){document.getElementById('triviaQ').textContent='🎉 Quiz Complete! Score: '+tScore+'/'+tTotal+' 🎉';document.getElementById('triviaOpts').innerHTML='';document.getElementById('tScore').textContent='Final: '+tScore+'/'+tTotal;if(tScore===tTotal){createConfetti(80);launchFireworks();}return;}
+const q=triviaQ[tIdx];document.getElementById('triviaQ').innerHTML='Q'+(tIdx+1)+': '+q.q;document.getElementById('tScore').textContent='Score: '+tScore+'/'+tTotal;const d=document.getElementById('triviaOpts');d.innerHTML='';q.o.forEach((opt,idx)=>{const b=document.createElement('div');b.className='trivia-opt';b.textContent=opt;b.onclick=function(){if(this.classList.contains('correct')||this.classList.contains('wrong'))return;tTotal++;if(idx===q.c){this.classList.add('correct');tScore++;createConfetti(15);}else{this.classList.add('wrong');document.querySelectorAll('.trivia-opt')[q.c].classList.add('correct');}
+document.getElementById('tScore').textContent='Score: '+tScore+'/'+tTotal;setTimeout(()=>{tIdx++;showTrivia();},1200);};d.appendChild(b);});}
+
+// Memory
+let memCards=[],memFlipped=[],memMatched=0,memMoves=0,memLocked=false;
+function startMemoryGame(){memMatched=0;memMoves=0;memFlipped=[];memLocked=false;document.getElementById('memScore').textContent='Moves: 0 | Matches: 0/6';const g=document.getElementById('memGrid');g.innerHTML='';let e=[...memEmojis,...memEmojis];for(let i=e.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[e[i],e[j]]=[e[j],e[i]];}
+memCards=e;e.forEach((em,idx)=>{const c=document.createElement('div');c.className='mem-card';c.dataset.idx=idx;c.dataset.em=em;c.textContent='❓';c.onclick=function(){if(memLocked||this.classList.contains('flipped')||this.classList.contains('matched'))return;flipMem(this);};g.appendChild(c);});}
+function flipMem(card){card.classList.add('flipped');card.textContent=card.dataset.em;memFlipped.push(card);if(memFlipped.length===2){memMoves++;memLocked=true;const[a,b]=memFlipped;if(a.dataset.em===b.dataset.em){a.classList.add('matched');b.classList.add('matched');memMatched++;memFlipped=[];memLocked=false;document.getElementById('memScore').textContent='Moves: '+memMoves+' | Matches: '+memMatched+'/6';if(memMatched===6){setTimeout(()=>{document.getElementById('memScore').textContent='🎉 '+memMoves+' moves! Amazing! 🎉';createConfetti(80);launchFireworks();},500);}}else{setTimeout(()=>{a.classList.remove('flipped');a.textContent='❓';b.classList.remove('flipped');b.textContent='❓';memFlipped=[];memLocked=false;document.getElementById('memScore').textContent='Moves: '+memMoves+' | Matches: '+memMatched+'/6';},800);}}}
+
+// Game panel switching
+function switchGamePanel(g,btn){document.querySelectorAll('.game-panel').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.game-btn-select').forEach(x=>x.classList.remove('active'));document.getElementById('panel-'+g).classList.add('active');btn.classList.add('active');if(g==='balloon')startBalloonGame();if(g==='memory')startMemoryGame();if(g==='trivia')startTrivia();if(g==='mole')startMoleGame();}
+
+// Wishes
+let wishList=[];
+const wishIconColors=['💖','🌟','🎀','💫','✨','🌺','🦋','🌈','💎','🎈','👑','⭐'];
+function renderWishes(){const c=document.getElementById('wishContainer');c.innerHTML='';
+const main=document.createElement('div');main.className='wish-card';
+main.innerHTML='<div class="wish-icon">🎂</div><div class="wish-name">💙 Mathan</div><div class="wish-msg">Happy Birthday! 🎂💖<br><br>Unna maari oru friend en life la irukkuradhu romba periya blessing. Namma daily pesunalum, pesalanaalum, nee enakku eppovum special dhana. ❤️<br><br>Un smile eppovum ippadiye irukanum, un dreams ellam nijamaaganum, un life happiness and success nala nirayanum nu manasukulla irundhu wish panren. ✨<br><br>Thanks for being such a wonderful person and an amazing friend. Indha birthday unakku neraya happiness, love, and unforgettable memories kondu varanum.<br><br>Have an awesome day and a beautiful year ahead! 🥳🌸💫</div><div class="wish-time">💝 My wish for you today 💫</div>';
+c.appendChild(main);
+wishList.forEach((w,i)=>{const card=document.createElement('div');card.className='wish-card';
+card.innerHTML='<div class="wish-icon">'+wishIconColors[i%wishIconColors.length]+'</div><div class="wish-name">'+w.name+'</div><div class="wish-msg">'+w.msg+'</div><div class="wish-time">'+w.time+'</div>';
+c.appendChild(card);});updateWishCount();}
+function addWish(e){e.preventDefault();const n=document.getElementById('wishName').value;const m=document.getElementById('wishMsg').value;const now=new Date();wishList.unshift({name:'💝 '+n,msg:m,time:now.toLocaleString()});document.getElementById('wishName').value='';document.getElementById('wishMsg').value='';renderWishes();createConfetti(45);}
+function updateWishCount(){const c=wishList.length+1;document.getElementById('wishCount').textContent='🌟 '+c+' wishes shining bright! Add yours! 🌟';}
+renderWishes();
+
+// Confetti
+function createConfetti(n=15){const colors=['#b388ff','#e040fb','#00e5ff','#39ff14','#ff6bff','#FFD700','#ff1744','#ffab00','#7c4dff'];for(let i=0;i<n;i++){const e=document.createElement('div');e.className='confetti';e.style.left=Math.random()*100+'vw';e.style.background=colors[Math.floor(Math.random()*colors.length)];e.style.color=colors[Math.floor(Math.random()*colors.length)];e.style.width=(5+Math.random()*10)+'px';e.style.height=(5+Math.random()*10)+'px';e.style.borderRadius=Math.random()>.5?'50%':'2px';e.style.animationDuration=(3+Math.random()*3)+'s';e.style.animationDelay=Math.random()*2+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),6000);}}
+
+// Fireworks - skyshot with sound
+function fwSound(){
+  try{
+    const ac=new(window.AudioContext||window.webkitAudioContext)();
+    // ---- Launch whistle (realistic rising pitch) ----
+    const osc=ac.createOscillator();osc.type='sawtooth';
+    osc.frequency.setValueAtTime(200,ac.currentTime);
+    osc.frequency.linearRampToValueAtTime(1800,ac.currentTime+0.55);
+    const wGain=ac.createGain();
+    wGain.gain.setValueAtTime(0.04,ac.currentTime);
+    wGain.gain.setValueAtTime(0.04,ac.currentTime+0.4);
+    wGain.gain.exponentialRampToValueAtTime(0.001,ac.currentTime+0.6);
+    const wFilter=ac.createBiquadFilter();wFilter.type='bandpass';wFilter.frequency.value=800;wFilter.Q.value=2;
+    osc.connect(wFilter);wFilter.connect(wGain);wGain.connect(ac.destination);
+    osc.start(ac.currentTime);osc.stop(ac.currentTime+0.6);
+    // ---- Primary BOOM (rich explosion) ----
+    setTimeout(()=>{
+      const sr=ac.sampleRate;
+      // Layer 1: deep low boom
+      const buf1=ac.createBuffer(1,sr*0.6,sr);const d1=buf1.getChannelData(0);
+      for(let i=0;i<d1.length;i++)d1[i]=(Math.random()*2-1)*Math.pow(1-i/d1.length,4)*0.9;
+      const n1=ac.createBufferSource();n1.buffer=buf1;
+      const lp1=ac.createBiquadFilter();lp1.type='lowpass';lp1.frequency.value=150;
+      const g1=ac.createGain();g1.gain.setValueAtTime(0.25,ac.currentTime);g1.gain.exponentialRampToValueAtTime(0.001,ac.currentTime+0.6);
+      n1.connect(lp1);lp1.connect(g1);g1.connect(ac.destination);n1.start(ac.currentTime);n1.stop(ac.currentTime+0.6);
+      // Layer 2: mid crack
+      const buf2=ac.createBuffer(1,sr*0.3,sr);const d2=buf2.getChannelData(0);
+      for(let i=0;i<d2.length;i++)d2[i]=(Math.random()*2-1)*Math.pow(1-i/d2.length,2);
+      const n2=ac.createBufferSource();n2.buffer=buf2;
+      const lp2=ac.createBiquadFilter();lp2.type='lowpass';lp2.frequency.value=800;
+      const g2=ac.createGain();g2.gain.setValueAtTime(0.12,ac.currentTime);g2.gain.exponentialRampToValueAtTime(0.001,ac.currentTime+0.3);
+      n2.connect(lp2);lp2.connect(g2);g2.connect(ac.destination);n2.start(ac.currentTime);n2.stop(ac.currentTime+0.3);
+      // Layer 3: sharp high transient
+      const buf3=ac.createBuffer(1,Math.floor(sr*0.08),sr);const d3=buf3.getChannelData(0);
+      for(let i=0;i<d3.length;i++)d3[i]=(Math.random()*2-1)*(1-i/d3.length);
+      const n3=ac.createBufferSource();n3.buffer=buf3;
+      const g3=ac.createGain();g3.gain.setValueAtTime(0.15,ac.currentTime);g3.gain.exponentialRampToValueAtTime(0.001,ac.currentTime+0.08);
+      n3.connect(g3);g3.connect(ac.destination);n3.start(ac.currentTime);n3.stop(ac.currentTime+0.08);
+    },560);
+    // ---- Echo boom (slightly delayed for realism) ----
+    setTimeout(()=>{
+      const sr=ac.sampleRate;
+      const buf=ac.createBuffer(1,sr*0.5,sr);const d=buf.getChannelData(0);
+      for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/d.length,3);
+      const n=ac.createBufferSource();n.buffer=buf;
+      const lp=ac.createBiquadFilter();lp.type='lowpass';lp.frequency.value=200;
+      const g=ac.createGain();g.gain.setValueAtTime(0.08,ac.currentTime);g.gain.exponentialRampToValueAtTime(0.001,ac.currentTime+0.5);
+      n.connect(lp);lp.connect(g);g.connect(ac.destination);n.start(ac.currentTime);n.stop(ac.currentTime+0.5);
+    },800);
+    // ---- Crackle sparks ----
+    setTimeout(()=>{
+      for(let c=0;c<6;c++)setTimeout(()=>{
+        const sr=ac.sampleRate;
+        const buf=ac.createBuffer(1,Math.floor(sr*0.08),sr);const d=buf.getChannelData(0);
+        for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/d.length,2);
+        const s=ac.createBufferSource();s.buffer=buf;
+        const hp=ac.createBiquadFilter();hp.type='highpass';hp.frequency.value=3000;
+        const g=ac.createGain();g.gain.setValueAtTime(0.04,ac.currentTime);g.gain.exponentialRampToValueAtTime(0.001,ac.currentTime+0.08);
+        s.connect(hp);hp.connect(g);g.connect(ac.destination);s.start(ac.currentTime);s.stop(ac.currentTime+0.08);
+      },c*60+Math.random()*40);
+    },700);
+  }catch(e){}
+}
+function launchFireworks(){
+  const palettes=[
+    ['#FFD700','#FFA500','#FF6347','#FF1493'],
+    ['#b388ff','#e040fb','#7c4dff','#00e5ff'],
+    ['#06b6d4','#22d3ee','#67e8f9','#a5f3fc'],
+    ['#f43f5e','#fb7185','#fda4af','#fecdd3'],
+    ['#39ff14','#4ade80','#86efac','#bbf7d0'],
+    ['#f59e0b','#fbbf24','#fcd34d','#fde68a'],
+    ['#ff6bff','#f472b6','#f9a8d4','#fbcfe8'],
+    ['#8b5cf6','#a78bfa','#c4b5fd','#ddd6fe']
+  ];
+  for(let f=0;f<5;f++){
+    setTimeout(()=>{
+      fwSound();
+      const palette=palettes[Math.floor(Math.random()*palettes.length)];
+      const cx=15+Math.random()*70;
+      const cy=8+Math.random()*35;
+      // Rocket trail (shoots up from bottom)
+      const rocket=document.createElement('div');
+      rocket.style.cssText='position:fixed;left:'+cx+'vw;bottom:0;z-index:9996;pointer-events:none;';
+      for(let t=0;t<25;t++){
+        const sp=document.createElement('div');
+        const riseH=window.innerHeight*(1-cy/100);
+        sp.style.cssText='position:absolute;width:'+(2+Math.random()*3)+'px;height:'+(2+Math.random()*3)+'px;border-radius:50%;background:'+(Math.random()>.5?'#ffcc00':'#ff6600')+';bottom:0;left:'+(Math.random()*4-2)+'px;opacity:'+(0.3+Math.random()*0.5)+';animation:fwRocket '+(0.5+Math.random()*0.2)+'s ease-out forwards;animation-delay:'+(t*0.02)+'s;--rh:'+riseH+'px;';
+        rocket.appendChild(sp);
+      }
+      document.body.appendChild(rocket);
+      setTimeout(()=>rocket.remove(),1500);
+      // Outer burst
+      setTimeout(()=>{
+        const fw1=document.createElement('div');fw1.className='firework';fw1.style.left=cx+'vw';fw1.style.top=cy+'vh';
+        const n1=35+Math.floor(Math.random()*20);
+        for(let i=0;i<n1;i++){
+          const p=document.createElement('div');p.className='fw-particle';
+          const a=(Math.PI*2*i)/n1+Math.random()*0.2;
+          const d=50+Math.random()*130;
+          const sz=4+Math.random()*8;
+          p.style.cssText='width:'+sz+'px;height:'+sz+'px;border-radius:'+(Math.random()>.5?'50%':'2px')+';background:'+palette[Math.floor(Math.random()*palette.length)]+';box-shadow:0 0 '+Math.floor(6+Math.random()*8)+'px '+palette[Math.floor(Math.random()*palette.length)]+';'+'--tx:'+(Math.cos(a)*d)+'px;--ty:'+(Math.sin(a)*d)+'px;animation-duration:'+(.5+Math.random()*.7)+'s;';
+          fw1.appendChild(p);
+        }
+        document.body.appendChild(fw1);setTimeout(()=>fw1.remove(),2000);
+      },600);
+      // Inner sparkle burst
+      setTimeout(()=>{
+        const fw2=document.createElement('div');fw2.className='firework';fw2.style.left=cx+'vw';fw2.style.top=cy+'vh';
+        const n2=12+Math.floor(Math.random()*12);
+        const bright=['#fff','#FFD700','#00e5ff','#b388ff'];
+        for(let i=0;i<n2;i++){
+          const p=document.createElement('div');p.className='fw-particle';
+          const a=Math.random()*Math.PI*2;
+          const d=20+Math.random()*45;
+          const sz=2+Math.random()*4;
+          p.style.cssText='width:'+sz+'px;height:'+sz+'px;border-radius:50%;background:'+bright[Math.floor(Math.random()*bright.length)]+';box-shadow:0 0 10px '+bright[0]+';'+'--tx:'+(Math.cos(a)*d)+'px;--ty:'+(Math.sin(a)*d)+'px;animation-duration:'+(.3+Math.random()*.5)+'s;';
+          fw2.appendChild(p);
+        }
+        document.body.appendChild(fw2);setTimeout(()=>fw2.remove(),1500);
+      },750);
+    },f*500);
+  }
+}
+// Rocket trail keyframes
+const rStyle=document.createElement('style');
+rStyle.textContent='@keyframes fwRocket{0%{transform:translateY(0) scale(1);opacity:1}100%{transform:translateY(calc(-1 * var(--rh))) scale(0);opacity:0}}';
+document.head.appendChild(rStyle);
+
+// Floating particles
+(function(){const emojis=['🎂','🎈','🎉','🎊','✨','💖','🌟','🎁','🥳','🎀','💫','⭐','🔥','👑','🌺','🦋'];for(let i=0;i<20;i++){const e=document.createElement('div');e.className='particle';e.textContent=emojis[Math.floor(Math.random()*emojis.length)];e.style.left=Math.random()*100+'vw';e.style.fontSize=(15+Math.random()*25)+'px';e.style.animationDuration=(8+Math.random()*8)+'s';e.style.animationDelay=Math.random()*10+'s';document.body.appendChild(e);}})();
+
+// Auto celebration - birthday mode!
+function birthdayBlast(){createConfetti(20);launchFireworks();setTimeout(()=>{createConfetti(12);launchFireworks();},800);setTimeout(()=>{createConfetti(25);launchFireworks();},2000);setTimeout(()=>{createConfetti(12);launchFireworks();},3500);}
+birthdayBlast();
+setInterval(birthdayBlast,8000);
+
+// Birthday popup with floating emojis
+function showBDPopup(){
+  const box=document.getElementById('bdBox');
+  box.querySelectorAll('.bd-floating').forEach(e=>e.remove());
+  const emojis=['🎉','🎊','✨','💖','🌟','🎈','🎁','🥳','⭐','🔥','🦋','💫'];
+  for(let i=0;i<16;i++){
+    const e=document.createElement('div');
+    e.className='bd-floating';
+    e.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+    e.style.left=Math.random()*90+'%';
+    e.style.top=80+Math.random()*30+'%';
+    e.style.fontSize=(1.2+Math.random()*1.5)+'em';
+    e.style.animationDuration=(3+Math.random()*4)+'s';
+    e.style.animationDelay=(Math.random()*2)+'s';
+    box.appendChild(e);
+  }
+  document.getElementById('bdPopup').classList.add('show');
+}
+// Birthday countdown 10→0
+let bdCountdownRunning=false;
+function startBDCountdown(){
+  if(bdCountdownRunning)return;
+  bdCountdownRunning=true;
+  let count=10;
+  const numEl=document.getElementById('cd10num');
+  const circleEl=document.getElementById('countdown10');
+  circleEl.classList.add('cd-active');
+  const timer=setInterval(()=>{
+    count--;
+    numEl.textContent=count;
+    if(count<=0){
+      clearInterval(timer);
+      bdCountdownRunning=false;
+      circleEl.classList.remove('cd-active');
+      numEl.textContent='🎉';
+      showBDPopup();
+      setTimeout(()=>{createConfetti(100);launchFireworks();},600);
+      setTimeout(()=>{createConfetti(120);launchFireworks();},1400);
+    }
+  },1000);
+}
+// Click anywhere mini-confetti
+document.addEventListener('click',function(e){if(e.target.closest('.splash')||e.target.closest('.navbar')||e.target.closest('.game-btn-select')||e.target.closest('.hero-btn')||e.target.closest('.dialogue-nav')||e.target.closest('.dialogue-mini')||e.target.closest('.game-panel')||e.target.closest('.cake-3d')||e.target.closest('.bpop')||e.target.closest('.mem-card')||e.target.closest('.trivia-opt')||e.target.closest('.mole-hole')||e.target.closest('.bubble-form'))return;createConfetti(12);});
+</script>
+<audio id="bgm" loop preload="auto" src="bgm/bgm.mp3"></audio>
+</body>
+</html>
